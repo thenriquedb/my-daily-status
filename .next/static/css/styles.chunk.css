@@ -1,0 +1,162 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #f5f5f5;
+  height: 100vh;
+  
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased
+}
+
+input, button, textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+ul, li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+button, input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+.container {
+  width: 100%; 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+ 
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;  
+  max-width: 980px;
+  margin: 0 auto;  
+  padding: 10px 25px;
+}
+
+.content img {
+  height: 10vh;
+  margin-right: 40px;
+}
+
+.content nav ul li {
+  display: inline-block;
+  height: 60px;
+}
+
+.content nav ul li a {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  padding: 15px;
+  
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.content nav ul li a:hover {
+  color: #961D66;
+  border-bottom: 4px solid #961D66;
+}
+
+/* Menu Hamburguer */
+.menu-toggle {
+  display: none;
+  z-index: 10;
+  width: 40px;
+  height: 30px;
+  margin-top: 8px;
+  position: absolute;
+  top: 10px;
+  right: 14px;
+}
+
+.one,
+.two,
+.three {
+  background-color: #961D66;
+  height: 5px;
+  width: 100%;
+  margin: 6px auto;
+
+  transition-duration: 0.3s;
+}
+
+@media (max-width: 767px) {
+  .menu-section nav ul {
+    display: none;
+  } 
+
+  .menu-section.on nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      width: 100vw;
+
+      position: absolute;    
+      top: 0;
+      left: 0;
+
+      background-color: #961D66;
+      transition: background-color 0.5s;
+  } 
+
+  .menu-section.on ul {
+    display: block;
+  }
+
+  .menu-section.on ul li {
+    display: block;
+    margin-top: 20px ;
+  }
+
+  .menu-section.on  ul li a {
+    font-size: 28px;
+    color: #fff;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 120;
+  }
+
+  .menu-section.on .menu-toggle .one,
+  .menu-section.on .menu-toggle .two,
+  .menu-section.on .menu-toggle .three {
+    background-color: #fff;
+  }
+
+  .menu-section.on .menu-toggle .one {
+    transform: rotate(45deg) translate(7px,7px);
+  }
+
+  .menu-section.on .menu-toggle .two {
+    opacity: 0;
+  }
+
+  .menu-section.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(7px,-10px);
+  } 
+}
+
+/*# sourceMappingURL=styles.chunk.css.map*/
