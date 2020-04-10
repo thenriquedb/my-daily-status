@@ -1,11 +1,11 @@
-.container {
+#header {
   width: 100%; 
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   background-color: #fff;
  
 }
 
-.content {
+ .header-container {
   display: flex;
   justify-content: space-between;
   width: 100%;  
@@ -14,17 +14,17 @@
   padding: 10px 25px;
 }
 
-.content img {
+.header-container img {
   height: 10vh;
   margin-right: 40px;
 }
 
-.content nav ul li {
+.header-container nav ul li {
   display: inline-block;
   height: 60px;
 }
 
-.content nav ul li a {
+.header-container nav ul li a {
   font-size: 18px;
   color: #333;
   font-weight: bold;
@@ -35,7 +35,7 @@
   text-transform: uppercase;
 }
 
-.content nav ul li a:hover {
+.header-container nav ul li a:hover {
   color: #961D66;
   border-bottom: 4px solid #961D66;
 }

@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import './styles.css';
 
-export default function Header() {
+const Header = () => {
   const [menuOn, setMenuOn] = useState(false);
 
-  function toggleMenu() {
+  const toggleMenu = () => {
     setMenuOn(!menuOn);
-  }
+  };
 
   return (
-    <header className="container">
-      <div className="content">
+    <header id="header">
+      <div className="header-container">
         <img src="/logo.png" alt="My Daily Status" />
 
         <div className={`menu-section ${menuOn && 'on'}`}>
@@ -42,4 +42,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;

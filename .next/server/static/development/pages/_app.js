@@ -93,6 +93,63 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Footer/index.js":
+/*!************************************!*\
+  !*** ./components/Footer/index.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ "./components/Footer/styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/components/Footer/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const Footer = () => __jsx("footer", {
+  className: "container",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 5,
+    columnNumber: 3
+  }
+}, __jsx("div", {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6,
+    columnNumber: 5
+  }
+}, __jsx("p", {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7,
+    columnNumber: 7
+  }
+}, "ok")));
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
+/***/ "./components/Footer/styles.css":
+/*!**************************************!*\
+  !*** ./components/Footer/styles.css ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./components/Header/index.js":
 /*!************************************!*\
   !*** ./components/Header/index.js ***!
@@ -102,7 +159,6 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
@@ -114,27 +170,28 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-function Header() {
+
+const Header = () => {
   const {
     0: menuOn,
     1: setMenuOn
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
 
-  function toggleMenu() {
+  const toggleMenu = () => {
     setMenuOn(!menuOn);
-  }
+  };
 
   return __jsx("header", {
-    className: "container",
-    __self: this,
+    id: "header",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
       columnNumber: 5
     }
   }, __jsx("div", {
-    className: "content",
-    __self: this,
+    className: "header-container",
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14,
@@ -143,7 +200,7 @@ function Header() {
   }, __jsx("img", {
     src: "/logo.png",
     alt: "My Daily Status",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15,
@@ -151,7 +208,7 @@ function Header() {
     }
   }), __jsx("div", {
     className: `menu-section ${menuOn && 'on'}`,
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17,
@@ -161,7 +218,7 @@ function Header() {
     type: "button",
     onClick: toggleMenu,
     className: "menu-toggle",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18,
@@ -169,7 +226,7 @@ function Header() {
     }
   }, __jsx("div", {
     className: "one",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19,
@@ -177,7 +234,7 @@ function Header() {
     }
   }), __jsx("div", {
     className: "two",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20,
@@ -185,28 +242,28 @@ function Header() {
     }
   }), __jsx("div", {
     className: "three",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21,
       columnNumber: 13
     }
   })), __jsx("nav", {
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24,
       columnNumber: 11
     }
   }, __jsx("ul", {
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25,
       columnNumber: 13
     }
   }, __jsx("li", {
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26,
@@ -214,14 +271,14 @@ function Header() {
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27,
       columnNumber: 17
     }
   }, " In\xEDcio ")), __jsx("li", {
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29,
@@ -229,14 +286,14 @@ function Header() {
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/sobre",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30,
       columnNumber: 17
     }
   }, " Sobre ")), __jsx("li", {
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32,
@@ -244,14 +301,14 @@ function Header() {
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/cadastro",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33,
       columnNumber: 17
     }
   }, " Cadastro ")), __jsx("li", {
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36,
@@ -259,14 +316,16 @@ function Header() {
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/login",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 37,
       columnNumber: 17
     }
   }, " Entrar ")))))));
-}
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
 
 /***/ }),
 
@@ -1970,10 +2029,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/global.css */ "./styles/global.css");
 /* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Header */ "./components/Header/index.js");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer/index.js");
 var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 
 
 
@@ -1986,17 +2047,24 @@ const App = ({
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 8,
+    lineNumber: 9,
     columnNumber: 5
   }
 }), __jsx(Component, _extends({}, pageProps, {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9,
+    lineNumber: 10,
     columnNumber: 5
   }
-})));
+})), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11,
+    columnNumber: 5
+  }
+}));
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 

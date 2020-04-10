@@ -53,20 +53,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var Index = function Index() {
   return __jsx("div", {
+    className: "",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 4,
       columnNumber: 10
     }
-  });
+  }, "conteudo");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 3:
+/***/ 6:
 /*!**************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fthiago%2FDocumentos%2FDev%2FProjetos%2Ffullstack-lab%2Fpages%2Findex.js ***!
   \**************************************************************************************************************************************************/
@@ -89,5 +90,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[6,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
