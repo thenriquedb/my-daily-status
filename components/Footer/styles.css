@@ -41,7 +41,22 @@
   border-radius: 50%;
   background-color: #fff;
   margin-right: 20px;
+  transition: all 0.25s;
 }
+
+.footer-container .social-icons a svg{
+  transition: all 0.25s;
+}
+
+.footer-container .social-icons a:hover {
+  background-color:#7517A3;
+  transform: translateY(-5px);
+}
+
+.footer-container .social-icons a:hover svg {
+  fill: #fff
+}
+
 .footer-container .devpleno {
   display: flex;
   align-items: center;
