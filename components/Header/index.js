@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header id="header">
+    <header className="header">
       <div className="header-container">
         <img src="/logo.png" alt="My Daily Status" />
 

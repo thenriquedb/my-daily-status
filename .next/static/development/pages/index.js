@@ -53,7 +53,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var Index = function Index() {
   return __jsx("div", {
-    className: "",
+    className: "container",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -67,7 +67,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 6:
+/***/ 5:
 /*!**************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fthiago%2FDocumentos%2FDev%2FProjetos%2Ffullstack-lab%2Fpages%2Findex.js ***!
   \**************************************************************************************************************************************************/
@@ -90,5 +90,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js"]]]);
+},[[5,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

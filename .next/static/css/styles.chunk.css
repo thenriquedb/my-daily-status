@@ -16,6 +16,13 @@ html, body {
   -webkit-font-smoothing: antialiased
 }
 
+.container {
+  height: 30vh;
+  width: 100%;  
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 input, button, textarea {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -35,11 +42,11 @@ button, input {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
-#header {
+.header {
   width: 100%; 
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   background-color: #fff;
- 
+  position: fixed;
 }
 
  .header-container {
@@ -158,8 +165,70 @@ button, input {
     transform: rotate(-45deg) translate(7px,-10px);
   } 
 }
-.container {
+.footer {
+  width: 100%; 
+  height: 120px;
+  color: #fff;
   background-color: #961D66;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;  
+  height: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.footer-container p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-container span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer-container .social-icons {
+  display: flex;
+}
+
+.footer-container .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 20px;
+}
+.footer-container .devpleno {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.footer-container  .devpleno img {
+  width: 160px;
+}
+
+@media (max-width: 425px) {
+ .social-icons {
+   margin-bottom: 20px;
+ }
+  .footer-container {
+  flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=styles.chunk.css.map*/
