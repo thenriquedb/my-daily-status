@@ -167,7 +167,7 @@ button, input {
 }
 .footer {
   width: 100%; 
-  height: 120px;
+  height: 140px;
   color: #fff;
   background-color: #961D66;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -193,6 +193,8 @@ button, input {
 .footer-container span {
   font-size: 16px;
   font-weight: 500;
+  flex-wrap: wrap;
+
 }
 
 .footer-container .social-icons {
@@ -231,17 +233,16 @@ button, input {
 
 
 
-.footer-container  .devpleno img {
+.footer-container .devpleno img {
   width: 160px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 767px) {
  .social-icons {
-   margin-bottom: 20px;
+   margin-bottom: 30px;
  }
   .footer-container {
-  flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
   }
 }
