@@ -2129,10 +2129,7 @@ const App = ({
   Component,
   pageProps
 }) => __jsx("div", {
-  style: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
+  className: "component-container ",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -2143,21 +2140,21 @@ const App = ({
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 14,
+    lineNumber: 9,
     columnNumber: 5
   }
 }), __jsx(Component, _extends({}, pageProps, {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 15,
+    lineNumber: 10,
     columnNumber: 5
   }
 })), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 16,
+    lineNumber: 11,
     columnNumber: 5
   }
 }));

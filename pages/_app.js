@@ -5,12 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const App = ({ Component, pageProps }) => (
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-    }}
-  >
+  <div className="component-container ">
     <Header />
     <Component {...pageProps} />
     <Footer />
