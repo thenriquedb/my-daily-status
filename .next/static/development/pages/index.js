@@ -12838,7 +12838,7 @@ Index.getInitialProps = function _callee() {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!**************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Fthiago%2FDocumentos%2FDev%2FProjetos%2Ffullstack-lab%2Fpages%2Findex.js ***!
   \**************************************************************************************************************************************************/
@@ -12861,5 +12861,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
