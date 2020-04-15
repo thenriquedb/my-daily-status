@@ -1,22 +1,29 @@
 import React, { useEffect } from 'react';
 import Router from 'next/router';
 import AppMenu from '../components/AppMenu';
+import Loading from '../components/Loading';
 import auth0 from '../lib/auth0';
 
-export default function App({ loggedIn, user }) {
-  useEffect(() => {
-    if (loggedIn) return;
-    Router.push('/');
-  }, [loggedIn]);
+import '../styles/app.css';
 
-  if (loggedIn) {
+export default function App({ isAuth, user }) {
+  useEffect(() => {
+    if (isAuth) return;
+    Router.push('/');
+  }, [isAuth]);
+
+  if (isAuth) {
     return (
       <div className="app-container">
         <AppMenu user={user} />
       </div>
     );
   }
-  return null;
+  return (
+    <div className="loading-container">
+      <Loading />
+    </div>
+  );
 }
 
 // Processa o que tem de processar no servidor e manda para a pagina
@@ -27,14 +34,15 @@ export async function getServerSideProps({ req, res }) {
   if (session) {
     return {
       props: {
-        loggedIn: true,
+        isAuth: true,
         user: session.user,
       },
     };
   }
+
   return {
     props: {
-      loggedIn: false,
+      isAuth: false,
     },
   };
 }

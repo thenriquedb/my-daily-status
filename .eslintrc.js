@@ -28,6 +28,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     "react/prop-types": 0,
+    "no-unused-vars": ["error", { argsIgnorePattern: "res" }],
     'react/jsx-filename-extension': [
       'warn',
       { extensions: ['.jsx', '.js'] }
