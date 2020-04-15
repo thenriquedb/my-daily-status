@@ -5,14 +5,23 @@ import './styles.css';
 const Header = () => {
   const [menuOn, setMenuOn] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = async () => {
     setMenuOn(!menuOn);
+    document.body.style.overflow = !menuOn ? 'hidden' : 'initial';
   };
 
   return (
-    <header className="header">
+    <header id="header">
       <div className="header-container">
-        <img src="/logo.png" alt="My Daily Status" />
+        <Link href="/">
+          <a>
+            <img
+              className="header-logo"
+              src="/logo.png"
+              alt="My Daily Status"
+            />
+          </a>
+        </Link>
 
         <div className={`menu-section ${menuOn && 'on'}`}>
           <button type="button" onClick={toggleMenu} className="menu-toggle">

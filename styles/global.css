@@ -37,15 +37,41 @@ button, input {
   font-size: 14px;
 }
 
-.component-container {
-  height: 100%;
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+ .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 100%;
+  max-width: 300px;
+  color: #ffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 12px;
+  padding: 20px;
+  border: 3px solid #fff;
+  transition: all 0.25s;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #961D66;
+  -webkit-box-shadow: 6px 12px 12px -6px rgba(31,31,31,0.59);
+  -moz-box-shadow: 6px 12px 12px -6px rgba(31,31,31,0.59);
+  box-shadow: 6px 12px 12px -6px rgba(31,31,31,0.59);
+  transform: translateY(-5px);
 }
 
 .section {
   background-color: #fff;
   width: 100%; 
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .section-content {
@@ -59,10 +85,9 @@ button, input {
 .section-title {
   font-size: 28px;
   color: #333;
-  margin: 15px 0;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   line-height: 38px;
   text-align: center;
 }

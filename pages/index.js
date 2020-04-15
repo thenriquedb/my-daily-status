@@ -1,15 +1,18 @@
 import React from 'react';
 import fetch from 'isomorphic-unfetch';
-import { FaUsers, FaUserShield, FaRetweet } from 'react-icons/fa';
+import Link from 'next/link';
+
+import Statistics from '../components/Statistics';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 import '../styles/index.css';
 
 const Index = ({ cases }) => {
-  const todayCases = cases[1];
-
   return (
-    <main className="home-container">
-      <div className="background">
+    <>
+      <Header />
+      <main className="home-container">
         <div className="bg-filter">
           <div className="content">
             <h1>
@@ -27,80 +30,49 @@ const Index = ({ cases }) => {
               pessoas a sua volta de forma anônima.
             </p>
 
-            <button>Faça sua parte você também</button>
+            <Link href="/api/login">
+              <a className="button">Faça sua parte você também</a>
+            </Link>
           </div>
         </div>
-      </div>
 
-      <section className="section">
-        <div className="section-content ">
-          <div className="app-details">
-            <div className="app-detail-item">
+        <section className="section">
+          <div className="section-content ">
+            <div className="protects-your-community">
+              <img src="/peoples.svg" alt="Peoples on Park" />
               <div>
-                <FaUsers size={38} color="#fff" />
+                <h1> Proteja você e toda a sua comunidade </h1>
+                <p>
+                  Donec nec molestie metus. Integer finibus fringilla arcu, vel
+                  suscipit urna vestibulum eget. Morbi eget purus pellentesque,
+                  tempor nibh eu, pellentesque nunc. Morbi pulvinar magna sit
+                  amet scelerisque scelerisque.
+                </p>
               </div>
-              <p>Mantenha-se protegido. Sua comunidade também.</p>
-              <span>
-                Aenean sit amet ligula varius, vulputate ex in, imperdiet
-                ligula. Sed eu sapien eros. Ut eget facilisis felis.
-                Pellentesque dui nibh, tempor id iaculis id, viverra ac lorem.
-                Maecenas eget risus velit. Ut id commodo nisi.
-              </span>
             </div>
 
-            <div className="app-detail-item">
+            <div className="share-your-status">
               <div>
-                <FaUserShield size={38} color="#fff" />
+                <h1>
+                  {' '}
+                  COMPARTILHE SEU STATUS PARA VISUALZIAR OS DAS OUTRAS PESSOAS{' '}
+                </h1>
+                <p>
+                  Donec nec molestie metus. Integer finibus fringilla arcu, vel
+                  suscipit urna vestibulum eget. Morbi eget purus pellentesque,
+                  tempor nibh eu, pellentesque nunc. Morbi pulvinar magna sit
+                  amet scelerisque scelerisque.
+                </p>
               </div>
-              <p>Mantenha sua comunidade protegida</p>
-              <span>
-                Aenean sit amet ligula varius, vulputate ex in, imperdiet
-                ligula. Sed eu sapien eros. Ut eget facilisis felis.
-                Pellentesque dui nibh, tempor id iaculis id, viverra ac lorem.
-                Maecenas eget risus velit. Ut id commodo nisi.
-              </span>
-            </div>
-
-            <div className="app-details">
-              <div className="app-detail-item">
-                <div>
-                  <FaRetweet size={38} color="#fff" />
-                </div>
-                <p>Compartilhe como você está</p>
-                <span>
-                  Aenean sit amet ligula varius, vulputate ex in, imperdiet
-                  ligula. Sed eu sapien eros. Ut eget facilisis felis.
-                  Pellentesque dui nibh, tempor id iaculis id, viverra ac lorem.
-                  Maecenas eget risus velit. Ut id commodo nisi.
-                </span>
-              </div>
+              <img src="/share.svg" alt="Share " />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section section-dark">
-        <h1 className="section-title">Estatísticas do Brasil </h1>
-        <div className="section-content ">
-          <div className="covid-infos">
-            <div className="covid-info-item">
-              <p>{todayCases.Confirmed}</p>
-              <span> Confirmados</span>
-            </div>
-
-            <div className="covid-info-item">
-              <p>{todayCases.Deaths}</p>
-              <span> Mortes</span>
-            </div>
-
-            <div className="covid-info-item">
-              <p>{todayCases.Recovered}</p>
-              <span> Recuperados</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+        <Statistics todayCases={cases[1]} />
+      </main>
+      <Footer />
+    </>
   );
 };
 
