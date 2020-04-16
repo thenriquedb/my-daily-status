@@ -26,7 +26,7 @@ export default function AppMenu({ user }) {
       <div className="app-menu-options">
         <img className="avatar" src={user.picture} alt="Avatar" />
         <p>{user.name}</p>
-        <span> Você possui altas chances de está contaminado </span>
+        {/* <span> Você possui altas chances de está contaminado </span> */}
 
         <button type="button" onClick={() => handleEdit}>
           Editar perfil

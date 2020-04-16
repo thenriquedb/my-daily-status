@@ -116,14 +116,7 @@ function AppMenu(_ref) {
       lineNumber: 28,
       columnNumber: 9
     }
-  }, user.name), __jsx("span", {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 9
-    }
-  }, " Voc\xEA possui altas chances de est\xE1 contaminado "), __jsx("button", {
+  }, user.name), __jsx("button", {
     type: "button",
     onClick: function onClick() {
       return handleEdit;
@@ -3804,10 +3797,13 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var __N_SSP = true;
 function App(_ref) {
   var isAuth = _ref.isAuth,
-      user = _ref.user;
+      hasRegisteredDailyStatus = _ref.hasRegisteredDailyStatus,
+      user = _ref.user,
+      _ref$nearbyUsers = _ref.nearbyUsers,
+      nearbyUsers = _ref$nearbyUsers === void 0 ? [] : _ref$nearbyUsers;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (isAuth) return;
-    next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/');
+    if (!isAuth) next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/');
+    if (!hasRegisteredDailyStatus) next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/status'); // if (!nearbyUsersList)
   }, [isAuth]);
 
   if (isAuth) {
@@ -3816,7 +3812,7 @@ function App(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17,
+        lineNumber: 26,
         columnNumber: 7
       }
     }, __jsx(_components_AppMenu__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -3824,34 +3820,33 @@ function App(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
+        lineNumber: 27,
         columnNumber: 9
       }
     }));
   }
 
   return __jsx("div", {
-    className: "loading-container",
+    className: "center-content fullscreen",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 33,
       columnNumber: 5
     }
   }, __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 34,
       columnNumber: 7
     }
   }));
-} // Processa o que tem de processar no servidor e manda para a pagina
-// Funcina como uma API porém com tela
+}
 
 /***/ }),
 
-/***/ 8:
+/***/ 13:
 /*!***************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fapp&absolutePagePath=%2Fhome%2Fthiago%2FDocumentos%2FDev%2FProjetos%2Ffullstack-lab%2Fpages%2Fapp.js ***!
   \***************************************************************************************************************************************************/
@@ -3874,5 +3869,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[8,"static/runtime/webpack.js","styles"]]]);
+},[[13,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=app.js.map

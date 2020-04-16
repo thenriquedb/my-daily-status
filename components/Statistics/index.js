@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.css';
 
-function Statistics({ todayCases }) {
+function Statistics({ title, todayCases }) {
   return (
     <section className="section section-dark">
-      <h1 className="section-title">Estatísticas do Brasil </h1>
+      <h1 className="section-title">{title}</h1>
       <div className="section-content">
         <div className="covid-infos">
           <div className="covid-info-item">

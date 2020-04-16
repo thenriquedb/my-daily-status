@@ -29,6 +29,7 @@ module.exports = {
     'prettier/prettier': 'error',
     "react/prop-types": 0,
     "no-unused-vars": ["error", { argsIgnorePattern: "res" }],
+    "no-unneeded-ternary": 'error',
     'react/jsx-filename-extension': [
       'warn',
       { extensions: ['.jsx', '.js'] }

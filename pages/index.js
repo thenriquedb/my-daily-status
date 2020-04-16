@@ -9,6 +9,8 @@ import Footer from '../components/Footer';
 import '../styles/index.css';
 
 const Index = ({ cases }) => {
+  const { brazil, world } = cases;
+
   return (
     <>
       <Header />
@@ -69,7 +71,11 @@ const Index = ({ cases }) => {
           </div>
         </section>
 
-        <Statistics todayCases={cases[1]} />
+        <Statistics
+          title="ESTATÍSTICAS DO BRASIL"
+          todayCases={brazil[brazil.length - 1]}
+        />
+        <Statistics title="ESTATÍSTICAS DO MUNDO" todayCases={world} />
       </main>
       <Footer />
     </>
@@ -77,11 +83,27 @@ const Index = ({ cases }) => {
 };
 
 Index.getInitialProps = async function () {
-  const response = await fetch(
+  const worldCases = await await fetch(
+    'https://api.covid19api.com/world/total'
+  );
+
+  const brazilCases = await fetch(
     'https://api.covid19api.com/live/country/brazil'
   );
-  const data = await response.json();
-  return { cases: data };
+
+  const dataBrazil = await brazilCases.json();
+  const dataWorld = await worldCases.json();
+
+  return {
+    cases: {
+      brazil: dataBrazil,
+      world: {
+        Confirmed: dataWorld.TotalConfirmed,
+        Deaths: dataWorld.TotalDeaths,
+        Recovered: dataWorld.TotalRecovered,
+      },
+    },
+  };
 };
 
 export default Index;
