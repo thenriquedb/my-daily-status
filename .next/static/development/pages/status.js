@@ -13796,15 +13796,20 @@ function status(_ref) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            alert('ok');
-            _context.next = 3;
+            _context.next = 2;
             return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(axios__WEBPACK_IMPORTED_MODULE_4___default.a.post('/api/status/store', {
-              symptoms: selectSymptom // coords,
-
+              symptoms: selectedSymptoms,
+              coords: coords
             }));
 
-          case 3:
+          case 2:
             response = _context.sent;
+
+            if (response.status === 200) {
+              alert('salvou bunito');
+            } else {
+              alert('deu erros');
+            }
 
           case 4:
           case "end":
@@ -13825,7 +13830,7 @@ function status(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57,
+        lineNumber: 62,
         columnNumber: 9
       }
     }), __jsx("div", {
@@ -13833,7 +13838,7 @@ function status(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59,
+        lineNumber: 64,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -13841,7 +13846,7 @@ function status(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60,
+        lineNumber: 65,
         columnNumber: 11
       }
     }, __jsx("div", {
@@ -13849,7 +13854,7 @@ function status(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61,
+        lineNumber: 66,
         columnNumber: 13
       }
     }, __jsx("img", {
@@ -13858,21 +13863,21 @@ function status(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62,
+        lineNumber: 67,
         columnNumber: 15
       }
     }), __jsx("p", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63,
+        lineNumber: 68,
         columnNumber: 15
       }
     }, "Ol\xE1 ", __jsx("b", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64,
+        lineNumber: 69,
         columnNumber: 21
       }
     }, user.name), ", como voc\xEA est\xE1 se sentindo hoje? Selecione abaixo os sintomas que voc\xEA esta sentindo. Caso n\xE3o esteja apresentando nenhum, clique em continuar.", ' ')), __jsx("div", {
@@ -13880,7 +13885,7 @@ function status(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70,
+        lineNumber: 75,
         columnNumber: 13
       }
     }, _json_symptoms_json__WEBPACK_IMPORTED_MODULE_9__.map(function (symptom) {
@@ -13892,7 +13897,7 @@ function status(_ref) {
         __self: _this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73,
+          lineNumber: 78,
           columnNumber: 19
         }
       });
@@ -13901,7 +13906,7 @@ function status(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83,
+        lineNumber: 88,
         columnNumber: 13
       }
     }, __jsx("button", {
@@ -13910,14 +13915,14 @@ function status(_ref) {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84,
+        lineNumber: 89,
         columnNumber: 15
       }
     }, "Continuar")))), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 90,
+        lineNumber: 95,
         columnNumber: 9
       }
     }));
@@ -13928,14 +13933,14 @@ function status(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96,
+      lineNumber: 101,
       columnNumber: 5
     }
   }, __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97,
+      lineNumber: 102,
       columnNumber: 7
     }
   }));
@@ -13943,7 +13948,7 @@ function status(_ref) {
 
 /***/ }),
 
-/***/ 13:
+/***/ 3:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fstatus&absolutePagePath=%2Fhome%2Fthiago%2FDocumentos%2FDev%2FProjetos%2Ffullstack-lab%2Fpages%2Fstatus.js ***!
   \*********************************************************************************************************************************************************/
@@ -13966,5 +13971,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[13,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=status.js.map

@@ -3,7 +3,7 @@ import auth0 from '../../../lib/auth0';
 import getCurrentDate from '../../../util/getCurrentDate';
 
 export default async function store(req, res) {
-  const { status } = req.body;
+  const { symptoms } = req.body;
   const { latitude, longitude } = req.body.coords;
 
   const session = await auth0.getSession(req);
@@ -15,15 +15,27 @@ export default async function store(req, res) {
   const { sub: userId } = session.user;
 
   await db
-    .collection('markers')
-    .doc(currentDate)
-    .collection('checks')
+    .collection('users')
     .doc(userId)
+    .collection('history')
+    .doc(currentDate)
     .set({
-      status,
-      userId,
-      coordinates: new admin.firestore.GeoPoint(latitude, longitude),
+      symptoms,
+      status: 'covid',
+      coordinates: {
+        latitude,
+        longitude,
+      },
     });
 
-  return res.send({ ok: true });
+  await db
+    .collection('history')
+    .doc(currentDate)
+    .collection('all')
+    .add({
+      coordinates: new admin.firestore.GeoPoint(latitude, longitude),
+      status: 'covid',
+    });
+
+  return res.status(200).end();
 }

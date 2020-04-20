@@ -38,11 +38,16 @@ export default function status({ user, isAuth }) {
   }
 
   async function handleSave() {
-    alert('ok');
     const response = await axios.post('/api/status/store', {
-      symptoms: selectSymptom,
-      // coords,
+      symptoms: selectedSymptoms,
+      coords,
     });
+
+    if (response.status === 200) {
+      alert('salvou bunito');
+    } else {
+      alert('deu erros');
+    }
   }
 
   useEffect(() => {

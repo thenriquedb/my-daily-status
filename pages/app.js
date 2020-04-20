@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Router from 'next/router';
 import AppMenu from '../components/AppMenu';
 import Loading from '../components/Loading';
@@ -34,6 +35,8 @@ export default function App({
     if (!hasRegisteredDailyStatus) Router.push('/status');
 
     getUserLocation();
+
+    // await axios.post('/api/user/')
   }, [isAuth]);
 
   if (isAuth) {
