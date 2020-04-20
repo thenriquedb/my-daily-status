@@ -633,17 +633,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _lib_auth0__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/auth0 */ "./lib/auth0.js");
-/* harmony import */ var _components_AppMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/AppMenu */ "./components/AppMenu/index.js");
-/* harmony import */ var _components_Loading__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Loading */ "./components/Loading/index.js");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer/index.js");
-/* harmony import */ var _components_Symptom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Symptom */ "./components/Symptom/index.js");
-/* harmony import */ var _json_symptoms_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../json/symptoms.json */ "./json/symptoms.json");
-var _json_symptoms_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../json/symptoms.json */ "./json/symptoms.json", 1);
-/* harmony import */ var _styles_status_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../styles/status.css */ "./styles/status.css");
-/* harmony import */ var _styles_status_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_styles_status_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "sweetalert2");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _lib_auth0__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../lib/auth0 */ "./lib/auth0.js");
+/* harmony import */ var _components_AppMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/AppMenu */ "./components/AppMenu/index.js");
+/* harmony import */ var _components_Loading__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Loading */ "./components/Loading/index.js");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer/index.js");
+/* harmony import */ var _components_Symptom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Symptom */ "./components/Symptom/index.js");
+/* harmony import */ var _json_symptoms_json__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../json/symptoms.json */ "./json/symptoms.json");
+var _json_symptoms_json__WEBPACK_IMPORTED_MODULE_9___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../json/symptoms.json */ "./json/symptoms.json", 1);
+/* harmony import */ var _styles_status_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../styles/status.css */ "./styles/status.css");
+/* harmony import */ var _styles_status_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_styles_status_css__WEBPACK_IMPORTED_MODULE_10__);
 var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/pages/status.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -703,10 +706,28 @@ function status({
       coords
     });
 
-    if (response.status === 200) {
-      alert('salvou bunito');
+    if (response.status === 2010) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+        title: 'Sucesso',
+        text: 'Seus sintomas foram salvos com sucesso!',
+        icon: 'success',
+        confirmButtonColor: '#961d66',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'swal-confirm-button'
+        }
+      });
     } else {
-      alert('deu erros');
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+        title: 'Erro',
+        text: 'Ocorreu um erro ao salvar suas informações. Tente novamente.',
+        icon: 'error',
+        confirmButtonColor: '#961d66',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'swal-confirm-button'
+        }
+      });
     }
   }
 
@@ -716,12 +737,12 @@ function status({
   }, [isAuth]);
 
   if (isAuth) {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_AppMenu__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_AppMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
       user: user,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62,
+        lineNumber: 82,
         columnNumber: 9
       }
     }), __jsx("div", {
@@ -729,7 +750,7 @@ function status({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64,
+        lineNumber: 84,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -737,7 +758,7 @@ function status({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65,
+        lineNumber: 85,
         columnNumber: 11
       }
     }, __jsx("div", {
@@ -745,7 +766,7 @@ function status({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66,
+        lineNumber: 86,
         columnNumber: 13
       }
     }, __jsx("img", {
@@ -754,21 +775,21 @@ function status({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67,
+        lineNumber: 87,
         columnNumber: 15
       }
     }), __jsx("p", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68,
+        lineNumber: 88,
         columnNumber: 15
       }
     }, "Ol\xE1 ", __jsx("b", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69,
+        lineNumber: 89,
         columnNumber: 21
       }
     }, user.name), ", como voc\xEA est\xE1 se sentindo hoje? Selecione abaixo os sintomas que voc\xEA esta sentindo. Caso n\xE3o esteja apresentando nenhum, clique em continuar.", ' ')), __jsx("div", {
@@ -776,11 +797,11 @@ function status({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75,
+        lineNumber: 95,
         columnNumber: 13
       }
-    }, _json_symptoms_json__WEBPACK_IMPORTED_MODULE_8__.map(symptom => {
-      return __jsx(_components_Symptom__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    }, _json_symptoms_json__WEBPACK_IMPORTED_MODULE_9__.map(symptom => {
+      return __jsx(_components_Symptom__WEBPACK_IMPORTED_MODULE_8__["default"], {
         key: symptom.value,
         onClick: selectSymptom,
         selected: selectedSymptoms.includes(symptom.value),
@@ -788,7 +809,7 @@ function status({
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78,
+          lineNumber: 98,
           columnNumber: 19
         }
       });
@@ -797,7 +818,7 @@ function status({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88,
+        lineNumber: 108,
         columnNumber: 13
       }
     }, __jsx("button", {
@@ -806,14 +827,14 @@ function status({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89,
+        lineNumber: 109,
         columnNumber: 15
       }
-    }, "Continuar")))), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    }, "Continuar")))), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95,
+        lineNumber: 115,
         columnNumber: 9
       }
     }));
@@ -824,14 +845,14 @@ function status({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101,
+      lineNumber: 121,
       columnNumber: 5
     }
-  }, __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102,
+      lineNumber: 122,
       columnNumber: 7
     }
   }));
@@ -841,7 +862,7 @@ async function getServerSideProps({
   res
 }) {
   // pega o cookie da sessão do usuario
-  const session = await _lib_auth0__WEBPACK_IMPORTED_MODULE_3__["default"].getSession(req);
+  const session = await _lib_auth0__WEBPACK_IMPORTED_MODULE_4__["default"].getSession(req);
 
   if (session) {
     req.user = session.user;
@@ -937,6 +958,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-icons/fa");
+
+/***/ }),
+
+/***/ "sweetalert2":
+/*!******************************!*\
+  !*** external "sweetalert2" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("sweetalert2");
 
 /***/ })
 

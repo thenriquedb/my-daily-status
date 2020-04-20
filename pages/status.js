@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Router from 'next/router';
 import axios from 'axios';
+import Swal from 'sweetalert2';
+
 import auth0 from '../lib/auth0';
 
 import AppMenu from '../components/AppMenu';
@@ -43,10 +45,28 @@ export default function status({ user, isAuth }) {
       coords,
     });
 
-    if (response.status === 200) {
-      alert('salvou bunito');
+    if (response.status === 2010) {
+      Swal.fire({
+        title: 'Sucesso',
+        text: 'Seus sintomas foram salvos com sucesso!',
+        icon: 'success',
+        confirmButtonColor: '#961d66',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'swal-confirm-button',
+        },
+      });
     } else {
-      alert('deu erros');
+      Swal.fire({
+        title: 'Erro',
+        text: 'Ocorreu um erro ao salvar suas informações. Tente novamente.',
+        icon: 'error',
+        confirmButtonColor: '#961d66',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'swal-confirm-button',
+        },
+      });
     }
   }
 
