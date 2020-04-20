@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Router from 'next/router';
 import AppMenu from '../components/AppMenu';
 import Loading from '../components/Loading';
@@ -15,10 +15,25 @@ export default function App({
   user,
   nearbyUsers = [],
 }) {
+  const [coords, setCoords] = useState({ latitude: null, longitude: null });
+
+  function getUserLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const { latitude, longitude } = position.coords;
+        setCoords({ latitude, longitude });
+      });
+    } else {
+      alert('Seu navegador não possui suporte a geolocalização');
+      Router.push('/');
+    }
+  }
+
   useEffect(() => {
     if (!isAuth) Router.push('/');
     if (!hasRegisteredDailyStatus) Router.push('/status');
-    // if (!nearbyUsersList)
+
+    getUserLocation();
   }, [isAuth]);
 
   if (isAuth) {

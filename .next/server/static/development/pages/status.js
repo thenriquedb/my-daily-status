@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -212,6 +212,148 @@ function AppMenu({
 /*!***************************************!*\
   !*** ./components/AppMenu/styles.css ***!
   \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./components/Footer/index.js":
+/*!************************************!*\
+  !*** ./components/Footer/index.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-icons/fa */ "react-icons/fa");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.css */ "./components/Footer/styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/components/Footer/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const Footer = () => __jsx("footer", {
+  className: "footer",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6,
+    columnNumber: 3
+  }
+}, __jsx("div", {
+  className: "footer-container",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7,
+    columnNumber: 5
+  }
+}, __jsx("div", {
+  className: "social-icons",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8,
+    columnNumber: 7
+  }
+}, __jsx("a", {
+  target: "_blank",
+  href: "https://www.linkedin.com/in/thenriquedomingues/",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9,
+    columnNumber: 9
+  }
+}, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaLinkedinIn"], {
+  color: "#961D66",
+  size: 26,
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13,
+    columnNumber: 11
+  }
+})), __jsx("a", {
+  target: "_blank",
+  href: "https://github.com/thenriquedb",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 16,
+    columnNumber: 9
+  }
+}, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaGithubAlt"], {
+  color: "#961D66",
+  size: 26,
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17,
+    columnNumber: 11
+  }
+})), __jsx("a", {
+  target: "_blank",
+  href: "https://t.me/thenrique",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 20,
+    columnNumber: 9
+  }
+}, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__["FaTelegramPlane"], {
+  color: "#961D66",
+  size: 26,
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 21,
+    columnNumber: 11
+  }
+}))), __jsx("div", {
+  className: "devpleno",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 25,
+    columnNumber: 7
+  }
+}, __jsx("a", {
+  target: "_blank",
+  href: "https://devpleno.com/",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 26,
+    columnNumber: 9
+  }
+}, __jsx("img", {
+  src: "/devPleno.png",
+  alt: "Dev Pleno",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 27,
+    columnNumber: 11
+  }
+})))));
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
+/***/ "./components/Footer/styles.css":
+/*!**************************************!*\
+  !*** ./components/Footer/styles.css ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -354,6 +496,98 @@ const Loading = () => __jsx("div", {
 
 /***/ }),
 
+/***/ "./components/Symptom/index.js":
+/*!*************************************!*\
+  !*** ./components/Symptom/index.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Symptom; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ "./components/Symptom/styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/components/Symptom/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+function Symptom({
+  symptom = {},
+  selected = false,
+  onClick
+}) {
+  return __jsx("button", {
+    type: "button",
+    onClick: () => onClick(symptom.value),
+    className: `symptom-icon-container ${selected && 'selected'}`,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 5
+    }
+  }, __jsx("div", {
+    className: "symptom-icon",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 7
+    }
+  }, __jsx("img", {
+    alt: symptom.name,
+    src: symptom.icon,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  })), __jsx("div", {
+    className: "symptom-desc",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 7
+    }
+  }, __jsx("p", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 9
+    }
+  }, symptom.name)));
+}
+
+/***/ }),
+
+/***/ "./components/Symptom/styles.css":
+/*!***************************************!*\
+  !*** ./components/Symptom/styles.css ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./json/symptoms.json":
+/*!****************************!*\
+  !*** ./json/symptoms.json ***!
+  \****************************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("[{\"name\":\"Cansaço\",\"value\":\"exhaustion\",\"icon\":\"/assets/icons/symptoms/exhaustion.svg\",\"covid\":\"sometimes\",\"cold\":\"sometimes\",\"flu\":\"common\"},{\"name\":\"Coriza\",\"value\":\"coryza\",\"icon\":\"/assets/icons/symptoms/coryza.svg\",\"covid\":\"common\",\"cold\":\"rare\",\"flu\":\"common\"},{\"name\":\"Diarreia\",\"value\":\"diarrhea\",\"icon\":\"/assets/icons/symptoms/diarrhea.svg\",\"covid\":\"sometimes\",\"cold\":\"sometimes\",\"flu\":\"common\"},{\"name\":\"Dificuldade de respirar\",\"value\":\"difficulty-breathing\",\"icon\":\"/assets/icons/symptoms/difficulty breathing.svg\",\"covid\":\"sometimes\",\"cold\":\"sometimes\",\"flu\":\"common\"},{\"name\":\"Dor de cabeça\",\"value\":\"headache\",\"icon\":\"/assets/icons/symptoms/headache.svg\",\"covid\":\"sometimes\",\"cold\":\"sometimes\",\"flu\":\"common\"},{\"name\":\"Dor de garganta\",\"value\":\"sore-throat\",\"icon\":\"/assets/icons/symptoms/sore-throat.svg\",\"covid\":\"sometimes\",\"cold\":\"sometimes\",\"flu\":\"common\"},{\"name\":\"Dor no corpo\",\"value\":\"body-pain\",\"icon\":\"/assets/icons/symptoms/body-pain.svg\",\"covid\":\"sometimes\",\"cold\":\"sometimes\",\"flu\":\"common\"},{\"name\":\"Espirro\",\"value\":\"sneeze\",\"icon\":\"/assets/icons/symptoms/sneeze.svg\",\"covid\":\"sometimes\",\"cold\":\"sometimes\",\"flu\":\"common\"},{\"name\":\"Fadiga\",\"value\":\"fatigue\",\"icon\":\"/assets/icons/symptoms/fatigue.svg\",\"covid\":\"sometimes\",\"cold\":\"sometimes\",\"flu\":\"common\"},{\"name\":\"Febre\",\"value\":\"feber\",\"icon\":\"/assets/icons/symptoms/feber.svg\",\"covid\":\"common\",\"cold\":\"rare\",\"flu\":\"common\"},{\"name\":\"Tosse\",\"value\":\"cough\",\"icon\":\"/assets/icons/symptoms/cough.svg\",\"covid\":\"common\",\"cold\":\"rare\",\"flu\":\"common\"}]");
+
+/***/ }),
+
 /***/ "./lib/auth0.js":
 /*!**********************!*\
   !*** ./lib/auth0.js ***!
@@ -402,10 +636,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_auth0__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/auth0 */ "./lib/auth0.js");
 /* harmony import */ var _components_AppMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/AppMenu */ "./components/AppMenu/index.js");
 /* harmony import */ var _components_Loading__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Loading */ "./components/Loading/index.js");
-/* harmony import */ var _styles_status_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/status.css */ "./styles/status.css");
-/* harmony import */ var _styles_status_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_status_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer/index.js");
+/* harmony import */ var _components_Symptom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Symptom */ "./components/Symptom/index.js");
+/* harmony import */ var _json_symptoms_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../json/symptoms.json */ "./json/symptoms.json");
+var _json_symptoms_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../json/symptoms.json */ "./json/symptoms.json", 1);
+/* harmony import */ var _styles_status_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../styles/status.css */ "./styles/status.css");
+/* harmony import */ var _styles_status_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_styles_status_css__WEBPACK_IMPORTED_MODULE_9__);
 var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/pages/status.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
 
 
 
@@ -425,9 +666,9 @@ function status({
     longitude: null
   });
   const {
-    0: status,
-    1: setStatus
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('bem');
+    0: selectedSymptoms,
+    1: setSelectedSymptoms
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
 
   function getUserLocation() {
     if (navigator.geolocation) {
@@ -447,14 +688,20 @@ function status({
     }
   }
 
-  function onStatusChange(e) {
-    setStatus(e.target.value);
+  function selectSymptom(symptom) {
+    if (selectedSymptoms.includes(symptom)) {
+      setSelectedSymptoms(selectedSymptoms.filter(item => item !== symptom));
+      return;
+    }
+
+    setSelectedSymptoms([...selectedSymptoms, symptom]);
   }
 
   async function handleSave() {
+    alert('ok');
     const response = await axios__WEBPACK_IMPORTED_MODULE_2___default.a.post('/api/status/store', {
-      status,
-      coords
+      symptoms: selectSymptom // coords,
+
     });
   }
 
@@ -469,7 +716,7 @@ function status({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46,
+        lineNumber: 57,
         columnNumber: 9
       }
     }), __jsx("div", {
@@ -477,7 +724,7 @@ function status({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47,
+        lineNumber: 59,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -485,112 +732,86 @@ function status({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48,
+        lineNumber: 60,
         columnNumber: 11
       }
-    }, __jsx("h1", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 49,
-        columnNumber: 13
-      }
-    }, "Como voc\xEA est\xE1 se sentindo hoje? "), "lat: ", (coords.latitude, coords.latitude), " ", __jsx("br", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 50,
-        columnNumber: 55
-      }
-    }), "lon: ", (coords.latitude, coords.longitude), __jsx("div", {
-      onChange: onStatusChange,
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 52,
-        columnNumber: 13
-      }
     }, __jsx("div", {
+      className: "nurse-container",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53,
+        lineNumber: 61,
+        columnNumber: 13
+      }
+    }, __jsx("img", {
+      src: "assets/icons/nurse.svg",
+      alt: "Nurse icon",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62,
         columnNumber: 15
       }
-    }, __jsx("input", {
-      type: "radio",
-      name: "status",
-      value: "bem",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54,
-        columnNumber: 17
-      }
-    }), __jsx("label", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 55,
-        columnNumber: 17
-      }
-    }, " Estou bem e sem sintomas ")), __jsx("div", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58,
-        columnNumber: 15
-      }
-    }, __jsx("input", {
-      type: "radio",
-      name: "status",
-      value: "gripe",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59,
-        columnNumber: 17
-      }
-    }), __jsx("label", {
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 60,
-        columnNumber: 17
-      }
-    }, " Estou com sintomas de gripe / resfriado ")), __jsx("div", {
+    }), __jsx("p", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 63,
         columnNumber: 15
       }
-    }, __jsx("input", {
-      type: "radio",
-      name: "status",
-      value: "covid",
+    }, "Ol\xE1 ", __jsx("b", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 64,
-        columnNumber: 17
+        columnNumber: 21
       }
-    }), __jsx("label", {
+    }, user.name), ", como voc\xEA est\xE1 se sentindo hoje? Selecione abaixo os sintomas que voc\xEA esta sentindo. Caso n\xE3o esteja apresentando nenhum, clique em continuar.", ' ')), __jsx("div", {
+      className: "symptoms-container",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65,
-        columnNumber: 17
+        lineNumber: 70,
+        columnNumber: 13
       }
-    }, " Estou com sintomas da covid "))), __jsx("button", {
+    }, _json_symptoms_json__WEBPACK_IMPORTED_MODULE_8__.map(symptom => {
+      return __jsx(_components_Symptom__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        key: symptom.value,
+        onClick: selectSymptom,
+        selected: selectedSymptoms.includes(symptom.value),
+        symptom: symptom,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73,
+          columnNumber: 19
+        }
+      });
+    })), __jsx("div", {
+      className: "save-button-container",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 83,
+        columnNumber: 13
+      }
+    }, __jsx("button", {
+      type: "button",
       onClick: handleSave,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68,
-        columnNumber: 13
+        lineNumber: 84,
+        columnNumber: 15
       }
-    }, " Salvar "))));
+    }, "Continuar")))), __jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 90,
+        columnNumber: 9
+      }
+    }));
   }
 
   return __jsx("div", {
@@ -598,14 +819,14 @@ function status({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 96,
       columnNumber: 5
     }
   }, __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 97,
       columnNumber: 7
     }
   }));
@@ -647,7 +868,7 @@ async function getServerSideProps({
 
 /***/ }),
 
-/***/ 3:
+/***/ 8:
 /*!*******************************!*\
   !*** multi ./pages/status.js ***!
   \*******************************/
@@ -700,6 +921,17 @@ module.exports = require("next/router");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-icons/fa":
+/*!*********************************!*\
+  !*** external "react-icons/fa" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-icons/fa");
 
 /***/ })
 

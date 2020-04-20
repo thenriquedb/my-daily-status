@@ -5,11 +5,16 @@ import auth0 from '../lib/auth0';
 
 import AppMenu from '../components/AppMenu';
 import Loading from '../components/Loading';
+import Footer from '../components/Footer';
+import Symptom from '../components/Symptom';
+
+import symptoms from '../json/symptoms.json';
+
 import '../styles/status.css';
 
 export default function status({ user, isAuth }) {
   const [coords, setCoords] = useState({ latitude: null, longitude: null });
-  const [status, setStatus] = useState('bem');
+  const [selectedSymptoms, setSelectedSymptoms] = useState([]);
 
   function getUserLocation() {
     if (navigator.geolocation) {
@@ -23,14 +28,20 @@ export default function status({ user, isAuth }) {
     }
   }
 
-  function onStatusChange(e) {
-    setStatus(e.target.value);
+  function selectSymptom(symptom) {
+    if (selectedSymptoms.includes(symptom)) {
+      setSelectedSymptoms(selectedSymptoms.filter((item) => item !== symptom));
+      return;
+    }
+
+    setSelectedSymptoms([...selectedSymptoms, symptom]);
   }
 
   async function handleSave() {
+    alert('ok');
     const response = await axios.post('/api/status/store', {
-      status,
-      coords,
+      symptoms: selectSymptom,
+      // coords,
     });
   }
 
@@ -44,30 +55,39 @@ export default function status({ user, isAuth }) {
     return (
       <>
         <AppMenu user={user} />
+
         <div className="status-container">
           <div className="content">
-            <h1>Como você está se sentindo hoje? </h1>
-            lat: {(coords.latitude, coords.latitude)} <br />
-            lon: {(coords.latitude, coords.longitude)}
-            <div onChange={onStatusChange}>
-              <div>
-                <input type="radio" name="status" value="bem" />
-                <label> Estou bem e sem sintomas </label>
-              </div>
-
-              <div>
-                <input type="radio" name="status" value="gripe" />
-                <label> Estou com sintomas de gripe / resfriado </label>
-              </div>
-
-              <div>
-                <input type="radio" name="status" value="covid" />
-                <label> Estou com sintomas da covid </label>
-              </div>
+            <div className="nurse-container">
+              <img src="assets/icons/nurse.svg" alt="Nurse icon" />
+              <p>
+                Olá <b>{user.name}</b>, como você está se sentindo hoje?
+                Selecione abaixo os sintomas que você esta sentindo. Caso não
+                esteja apresentando nenhum, clique em continuar.{' '}
+              </p>
             </div>
-            <button onClick={handleSave}> Salvar </button>
+
+            <div className="symptoms-container">
+              {symptoms.map((symptom) => {
+                return (
+                  <Symptom
+                    key={symptom.value}
+                    onClick={selectSymptom}
+                    selected={selectedSymptoms.includes(symptom.value)}
+                    symptom={symptom}
+                  />
+                );
+              })}
+            </div>
+
+            <div className="save-button-container">
+              <button type="button" onClick={handleSave}>
+                Continuar
+              </button>
+            </div>
           </div>
         </div>
+        <Footer />
       </>
     );
   }
