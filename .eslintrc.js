@@ -27,6 +27,7 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': 'error',
+    "react/prefer-stateless-function": [2, { "ignorePureComponents": true }],
     "react/prop-types": 0,
     "no-unused-vars": ["error", { argsIgnorePattern: "res" }],
     "no-unneeded-ternary": 'error',

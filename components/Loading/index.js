@@ -3,20 +3,9 @@ import './styles.css';
 // import { Container } from './styles';
 
 const Loading = () => (
-  <div className="loadingio-spinner-spinner-4imwjrf8mx6">
-    <div className="ldio-fcp4n9pfm7u">
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
+  <div className="loading-container">
+    <div className="loadingio-spinner-spinner-4imwjrf8mx6">
+      <div className="loader">Loading...</div>
     </div>
   </div>
 );

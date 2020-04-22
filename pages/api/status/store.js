@@ -33,6 +33,8 @@ export default async function store(req, res) {
     .doc(currentDate)
     .collection('all')
     .add({
+      user: userId,
+      symptoms,
       coordinates: new admin.firestore.GeoPoint(latitude, longitude),
       status: 'covid',
     });

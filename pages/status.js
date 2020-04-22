@@ -25,7 +25,17 @@ export default function status({ user, isAuth }) {
         setCoords({ latitude, longitude });
       });
     } else {
-      alert('Seu navegador não possui suporte a geolocalização');
+      Swal.fire({
+        title: 'Erro',
+        text: 'Seu navegador não possui suporte a geolocalização',
+        icon: 'error',
+        confirmButtonColor: '#961d66',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: 'swal-confirm-button',
+        },
+      });
+
       Router.push('/');
     }
   }
@@ -45,7 +55,7 @@ export default function status({ user, isAuth }) {
       coords,
     });
 
-    if (response.status === 2010) {
+    if (response.status === 200) {
       Swal.fire({
         title: 'Sucesso',
         text: 'Seus sintomas foram salvos com sucesso!',
@@ -56,18 +66,20 @@ export default function status({ user, isAuth }) {
           confirmButton: 'swal-confirm-button',
         },
       });
-    } else {
-      Swal.fire({
-        title: 'Erro',
-        text: 'Ocorreu um erro ao salvar suas informações. Tente novamente.',
-        icon: 'error',
-        confirmButtonColor: '#961d66',
-        confirmButtonText: 'OK',
-        customClass: {
-          confirmButton: 'swal-confirm-button',
-        },
-      });
+
+      return;
     }
+
+    Swal.fire({
+      title: 'Erro',
+      text: 'Ocorreu um erro ao salvar suas informações. Tente novamente.',
+      icon: 'error',
+      confirmButtonColor: '#961d66',
+      confirmButtonText: 'OK',
+      customClass: {
+        confirmButton: 'swal-confirm-button',
+      },
+    });
   }
 
   useEffect(() => {

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -126,6 +126,7 @@ function AppMenu({
   }
 
   async function handleLogout() {
+    // auth0.handleLogout(req)
     alert('deslogado');
   }
 
@@ -138,7 +139,7 @@ function AppMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 22,
       columnNumber: 5
     }
   }, __jsx("button", {
@@ -147,7 +148,7 @@ function AppMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 23,
       columnNumber: 7
     }
   }, __jsx("img", {
@@ -157,7 +158,7 @@ function AppMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 24,
       columnNumber: 9
     }
   })), __jsx("div", {
@@ -165,7 +166,7 @@ function AppMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 7
     }
   }, __jsx("img", {
@@ -175,14 +176,14 @@ function AppMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 28,
       columnNumber: 9
     }
   }), __jsx("p", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 9
     }
   }, user.name), __jsx("button", {
@@ -191,7 +192,7 @@ function AppMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 9
     }
   }, "Editar perfil"), __jsx("button", {
@@ -200,7 +201,7 @@ function AppMenu({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35,
+      lineNumber: 36,
       columnNumber: 9
     }
   }, "Sair")));
@@ -212,6 +213,62 @@ function AppMenu({
 /*!***************************************!*\
   !*** ./components/AppMenu/styles.css ***!
   \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./components/ContaminatedMarker/index.js":
+/*!************************************************!*\
+  !*** ./components/ContaminatedMarker/index.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ "./components/ContaminatedMarker/styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _public_assets_icons_virus_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/assets/icons/virus.svg */ "./public/assets/icons/virus.svg");
+var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/components/ContaminatedMarker/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const ContaminatedMarker = ({
+  data
+}) => {
+  return __jsx("div", {
+    className: `contaminated-marker ${data.status === 'covid' ? 'covid' : 'suspect'}`,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 5
+    }
+  }, __jsx(_public_assets_icons_virus_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 7
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ContaminatedMarker);
+
+/***/ }),
+
+/***/ "./components/ContaminatedMarker/styles.css":
+/*!**************************************************!*\
+  !*** ./components/ContaminatedMarker/styles.css ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -238,7 +295,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // import { Container } from './styles';
 
 const Loading = () => __jsx("div", {
-  className: "loadingio-spinner-spinner-4imwjrf8mx6",
+  className: "loading-container",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -246,7 +303,7 @@ const Loading = () => __jsx("div", {
     columnNumber: 3
   }
 }, __jsx("div", {
-  className: "ldio-fcp4n9pfm7u",
+  className: "loadingio-spinner-spinner-4imwjrf8mx6",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -254,90 +311,14 @@ const Loading = () => __jsx("div", {
     columnNumber: 5
   }
 }, __jsx("div", {
+  className: "loader",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
     lineNumber: 8,
     columnNumber: 7
   }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 9,
-    columnNumber: 7
-  }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 10,
-    columnNumber: 7
-  }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 11,
-    columnNumber: 7
-  }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12,
-    columnNumber: 7
-  }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13,
-    columnNumber: 7
-  }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 14,
-    columnNumber: 7
-  }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 15,
-    columnNumber: 7
-  }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 16,
-    columnNumber: 7
-  }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 17,
-    columnNumber: 7
-  }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 18,
-    columnNumber: 7
-  }
-}), __jsx("div", {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 19,
-    columnNumber: 7
-  }
-})));
+}, "Loading...")));
 
 /* harmony default export */ __webpack_exports__["default"] = (Loading);
 
@@ -347,6 +328,136 @@ const Loading = () => __jsx("div", {
 /*!***************************************!*\
   !*** ./components/Loading/styles.css ***!
   \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./components/Map/index.js":
+/*!*********************************!*\
+  !*** ./components/Map/index.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! google-map-react */ "google-map-react");
+/* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _UserMarker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../UserMarker */ "./components/UserMarker/index.js");
+/* harmony import */ var _ContaminatedMarker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ContaminatedMarker */ "./components/ContaminatedMarker/index.js");
+var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/components/Map/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+const Map = ({
+  user,
+  defaultCenter,
+  nearbyUsers,
+  zoom = 15
+}) => {
+  console.log(nearbyUsers);
+  return __jsx("div", {
+    style: {
+      height: '100vh',
+      width: '100%'
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 5
+    }
+  }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    bootstrapURLKeys: {
+      key: "AIzaSyDc4CkmlXdS1_w2Pg9z32LifASGs_ryEFc"
+    },
+    defaultCenter: defaultCenter,
+    defaultZoom: zoom,
+    options: {
+      fullscreenControl: false
+    },
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 7
+    }
+  }, __jsx(_UserMarker__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    user: user,
+    lat: defaultCenter.lat,
+    lng: defaultCenter.lng,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }), nearbyUsers.map(people => __jsx(_ContaminatedMarker__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    key: people.id,
+    lat: people.coordinates.latitude,
+    lng: people.coordinates.longitude,
+    data: people,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 11
+    }
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Map);
+
+/***/ }),
+
+/***/ "./components/UserMarker/index.js":
+/*!****************************************!*\
+  !*** ./components/UserMarker/index.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ "./components/UserMarker/styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/components/UserMarker/index.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const UserMarker = ({
+  user
+}) => __jsx("img", {
+  className: "user-marker",
+  src: user.picture,
+  alt: user.name,
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 5,
+    columnNumber: 3
+  }
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (UserMarker);
+
+/***/ }),
+
+/***/ "./components/UserMarker/styles.css":
+/*!******************************************!*\
+  !*** ./components/UserMarker/styles.css ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -379,15 +490,15 @@ __webpack_require__.r(__webpack_exports__);
 /* eslint-disable */
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_auth0_nextjs_auth0__WEBPACK_IMPORTED_MODULE_0__["initAuth0"])({
-  clientId: process.env.AUTH0_CLIENT_ID,
-  clientSecret: process.env.AUTH0_CLIENT_SECRET,
-  scope: process.env.AUTH0_SCOPE,
-  domain: process.env.AUTH0_DOMAIN,
-  redirectUri: process.env.AUTH0_REDIRECT_URI,
-  postLogoutRedirectUri: process.env.AUTH0_POST_LOGOUT_REDIRECT_URI,
+  clientId: "ys1EtB4gfIydejrHu73TAjQ9D4DKaKNu",
+  clientSecret: "C9lSDq1DNoN06X8D4iSuCKu5K-7aWOP4Ezjbm85quIw3bmYIGDGIqJ1Mt5TgeZfc",
+  scope: "openid profile",
+  domain: "dev-0x0gtl4z.auth0.com",
+  redirectUri: "http://localhost:3000/api/callback",
+  postLogoutRedirectUri: "http://localhost:3000/",
   session: {
-    cookieSecret: process.env.AUTH0_COOKIE_SECRET,
-    cookieLifetime: process.env.AUTH0_COOKIE_LIFETIME
+    cookieSecret: "6499fd0d6a0a56ed2c43d9e5c258dda7",
+    cookieLifetime: "3600"
   }
 }));
 
@@ -438,12 +549,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_AppMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/AppMenu */ "./components/AppMenu/index.js");
-/* harmony import */ var _components_Loading__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Loading */ "./components/Loading/index.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_AppMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AppMenu */ "./components/AppMenu/index.js");
+/* harmony import */ var _components_Loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Loading */ "./components/Loading/index.js");
+/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Map */ "./components/Map/index.js");
 /* harmony import */ var _lib_auth0__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/auth0 */ "./lib/auth0.js");
 /* harmony import */ var _util_getCurrentDate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/getCurrentDate */ "./util/getCurrentDate.js");
 /* harmony import */ var _lib_firebase__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/firebase */ "./lib/firebase.js");
@@ -452,6 +562,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_app_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_app_css__WEBPACK_IMPORTED_MODULE_8__);
 var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/pages/app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // import axios from 'axios';
 
 
 
@@ -489,34 +600,48 @@ function App({
       });
     } else {
       alert('Seu navegador não possui suporte a geolocalização');
-      next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/');
+      next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/');
     }
   }
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    if (!isAuth) next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/');
-    if (!hasRegisteredDailyStatus) next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/status');
+    if (!isAuth) next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/');
+    if (!hasRegisteredDailyStatus) next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/status');
     getUserLocation(); // await axios.post('/api/user/')
-  }, [isAuth]);
+  }, []);
 
-  if (isAuth) {
-    return __jsx("div", {
-      className: "app-container",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44,
-        columnNumber: 7
-      }
-    }, __jsx(_components_AppMenu__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  if (isAuth && coords.latitude && coords.longitude) {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_AppMenu__WEBPACK_IMPORTED_MODULE_2__["default"], {
       user: user,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45,
+        lineNumber: 46,
         columnNumber: 9
       }
-    }));
+    }), __jsx("div", {
+      className: "app-container",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 9
+      }
+    }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      nearbyUsers: nearbyUsers,
+      user: user,
+      defaultCenter: {
+        lat: coords.latitude,
+        lng: coords.longitude
+      },
+      zoom: 13,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48,
+        columnNumber: 11
+      }
+    })));
   }
 
   return __jsx("div", {
@@ -524,14 +649,14 @@ function App({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 63,
       columnNumber: 5
     }
-  }, __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 64,
       columnNumber: 7
     }
   }));
@@ -551,7 +676,7 @@ async function getServerSideProps({
   }
 
   const currentDate = Object(_util_getCurrentDate__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  const userDailyStatus = await _lib_firebase__WEBPACK_IMPORTED_MODULE_7__["db"].collection('markers').doc(currentDate).collection('checks').doc(session.user.sub).get();
+  const userDailyStatus = await _lib_firebase__WEBPACK_IMPORTED_MODULE_7__["db"].collection('users').doc(session.user.sub).collection('history').doc(currentDate).get();
   const todayRegistered = userDailyStatus.data();
 
   if (!todayRegistered) {
@@ -569,13 +694,10 @@ async function getServerSideProps({
   const {
     coordinates
   } = todayRegistered;
-  const nearbyUsers = await _lib_firebase__WEBPACK_IMPORTED_MODULE_7__["db"].collection('markers').doc(currentDate).collection('checks').near({
+  const nearbyUsers = await _lib_firebase__WEBPACK_IMPORTED_MODULE_7__["db"].collection('history').doc('2020-04-20').collection('all').near({
     center: coordinates,
-    radius: 1000
+    radius: 1000000
   }).get();
-  nearbyUsers.forEach(doc => {
-    console.log(doc.id, doc.data());
-  });
   const nearbyUsersList = [];
   nearbyUsers.docs.forEach(doc => {
     nearbyUsersList.push({
@@ -596,6 +718,39 @@ async function getServerSideProps({
     }
   };
 }
+
+/***/ }),
+
+/***/ "./public/assets/icons/virus.svg":
+/*!***************************************!*\
+  !*** ./public/assets/icons/virus.svg ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+var _ref = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", {
+  d: "M422.863 451.174l-.437.436-.423.423.86-.859zM426.138 447.898l-.334.334-.367.367.701-.701zM427.106 446.93l-.081.081.081-.081zM420.873 453.164l-.311.311-.269.269.58-.58z"
+});
+
+var _ref2 = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", {
+  d: "M471.539 227.517v8.251h-48.783c-3.762-31.193-16.097-59.783-34.586-83.329l34.545-34.545 5.836 5.836c18.875 18.875 47.498-9.726 28.61-28.61l-2.881-2.881-.331-.331-.392-.392.189.189-.454-.454-.126-.126-.35-.35-5.3-5.3-.596-.596-30.04-30.04c-18.9-18.9-47.538 9.685-28.61 28.61l5.836 5.836-34.545 34.545c-23.546-18.49-52.137-30.825-83.329-34.586V40.461h8.251c26.733 0 26.761-40.461 0-40.461h-56.964c-26.733 0-26.761 40.461 0 40.461h8.251v48.783c-31.193 3.762-59.783 16.097-83.329 34.586l-34.546-34.545 5.836-5.836c18.905-18.901-9.686-47.533-28.61-28.61l-5.456 5.456L54.84 95.12c-18.905 18.902 9.763 47.459 28.61 28.61l5.836-5.836 34.545 34.545c-18.49 23.546-30.825 52.137-34.586 83.329H40.461v-8.251c0-26.733-40.461-26.761-40.461 0v56.964c0 26.733 40.461 26.761 40.461 0v-8.251h48.783c3.762 31.193 16.097 59.783 34.586 83.329l-34.545 34.545-5.836-5.836c-18.901-18.899-47.539 9.685-28.61 28.61l2.881 2.881 7.36 7.36 30.04 30.04c18.9 18.9 47.541-9.682 28.61-28.61l-5.836-5.836 34.545-34.545c23.546 18.49 52.136 30.825 83.329 34.586v48.783h-8.251c-26.733 0-26.761 40.461 0 40.461h56.964c26.733 0 26.761-40.461 0-40.461h-8.251v-48.783c31.193-3.762 59.783-16.097 83.329-34.586l34.545 34.545-5.836 5.836c-18.905 18.902 9.763 47.457 28.61 28.61l2.921-2.921.762-.762 1.038-1.038.827-.827 3.378-3.378 1.302-1.302 30.052-30.052c18.905-18.901-9.686-47.533-28.61-28.61l-5.836 5.836-34.545-34.545c18.49-23.546 30.825-52.136 34.586-83.329h48.783v8.251c0 26.733 40.461 26.761 40.461 0v-56.964c.003-26.734-40.458-26.761-40.458-.001zM219.572 268.96c-24.636 0-44.607-19.972-44.607-44.607s19.972-44.607 44.607-44.607 44.607 19.972 44.607 44.607-19.971 44.607-44.607 44.607zm72.856 50.975c-15.192 0-27.507-12.315-27.507-27.507s12.315-27.507 27.507-27.507 27.507 12.315 27.507 27.507c0 15.192-12.315 27.507-27.507 27.507zM421.221 452.816l.783-.783-.404.404-.379.379z"
+});
+
+function SvgVirus(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("svg", _extends({
+    viewBox: "0 0 511.999 511.999"
+  }, props), _ref, _ref2);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SvgVirus);
 
 /***/ }),
 
@@ -625,7 +780,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 8:
+/***/ 3:
 /*!****************************!*\
   !*** multi ./pages/app.js ***!
   \****************************/
@@ -648,17 +803,6 @@ module.exports = require("@auth0/nextjs-auth0");
 
 /***/ }),
 
-/***/ "axios":
-/*!************************!*\
-  !*** external "axios" ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("axios");
-
-/***/ }),
-
 /***/ "firebase-admin":
 /*!*********************************!*\
   !*** external "firebase-admin" ***!
@@ -678,6 +822,17 @@ module.exports = require("firebase-admin");
 /***/ (function(module, exports) {
 
 module.exports = require("geofirestore");
+
+/***/ }),
+
+/***/ "google-map-react":
+/*!***********************************!*\
+  !*** external "google-map-react" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("google-map-react");
 
 /***/ }),
 

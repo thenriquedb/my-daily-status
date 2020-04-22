@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import Router from 'next/router';
 import AppMenu from '../components/AppMenu';
 import Loading from '../components/Loading';
+import Map from '../components/Map';
 
 import auth0 from '../lib/auth0';
 import getCurrentDate from '../util/getCurrentDate';
@@ -37,13 +38,24 @@ export default function App({
     getUserLocation();
 
     // await axios.post('/api/user/')
-  }, [isAuth]);
+  }, []);
 
-  if (isAuth) {
+  if (isAuth && coords.latitude && coords.longitude) {
     return (
-      <div className="app-container">
+      <>
         <AppMenu user={user} />
-      </div>
+        <div className="app-container">
+          <Map
+            nearbyUsers={nearbyUsers}
+            user={user}
+            defaultCenter={{
+              lat: coords.latitude,
+              lng: coords.longitude,
+            }}
+            zoom={13}
+          />
+        </div>
+      </>
     );
   }
 
@@ -69,10 +81,10 @@ export async function getServerSideProps({ req, res }) {
   const currentDate = getCurrentDate();
 
   const userDailyStatus = await db
-    .collection('markers')
-    .doc(currentDate)
-    .collection('checks')
+    .collection('users')
     .doc(session.user.sub)
+    .collection('history')
+    .doc(currentDate)
     .get();
 
   const todayRegistered = userDailyStatus.data();
@@ -92,20 +104,17 @@ export async function getServerSideProps({ req, res }) {
   const { coordinates } = todayRegistered;
 
   const nearbyUsers = await db
-    .collection('markers')
-    .doc(currentDate)
-    .collection('checks')
+    .collection('history')
+    .doc('2020-04-20')
+    .collection('all')
     .near({
       center: coordinates,
-      radius: 1000,
+      radius: 1000000,
     })
     .get();
 
-  nearbyUsers.forEach((doc) => {
-    console.log(doc.id, doc.data());
-  });
-
   const nearbyUsersList = [];
+
   nearbyUsers.docs.forEach((doc) => {
     nearbyUsersList.push({
       id: doc.id,

@@ -1,0 +1,10 @@
+.contaminated-marker {
+  width: 25px;
+  height: 25px;
+  fill: #FDDD5C;
+  /* background-image: url("/assets/icons/virus.svg"); */
+}
+
+.covid {
+  fill: #ff6961;
+}

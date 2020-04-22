@@ -10,6 +10,7 @@ export default function AppMenu({ user }) {
   }
 
   async function handleLogout() {
+    // auth0.handleLogout(req)
     alert('deslogado');
   }
 
