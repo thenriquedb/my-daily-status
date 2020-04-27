@@ -32,7 +32,7 @@ button {
   background-color: transparent;
 }
 
-button, input {
+button, input,select {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
@@ -41,6 +41,29 @@ a {
   text-decoration: none;
   color: inherit
 }
+
+input {
+  border: 1px solid #ccc;
+  height: 35px;
+  padding: 8px;
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+select {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+input:focus, select:focus {
+  border: 1px solid #961d66;
+  box-shadow: 0 0 15px rgba(150,29,102,0.25);
+}
+
 
  .button {
   display: flex;

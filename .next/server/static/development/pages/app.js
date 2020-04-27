@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -244,7 +244,7 @@ const ContaminatedMarker = ({
   data
 }) => {
   return __jsx("div", {
-    className: `contaminated-marker ${data.status === 'covid' ? 'covid' : 'suspect'}`,
+    className: `contaminated-marker ${data.status === 'covid' && 'covid'}`,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -255,7 +255,7 @@ const ContaminatedMarker = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 11,
       columnNumber: 7
     }
   }));
@@ -350,8 +350,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var google_map_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(google_map_react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _UserMarker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../UserMarker */ "./components/UserMarker/index.js");
 /* harmony import */ var _ContaminatedMarker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ContaminatedMarker */ "./components/ContaminatedMarker/index.js");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles.css */ "./components/Map/styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/components/Map/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -365,14 +368,11 @@ const Map = ({
 }) => {
   console.log(nearbyUsers);
   return __jsx("div", {
-    style: {
-      height: '100vh',
-      width: '100%'
-    },
+    className: "map-container",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 12,
       columnNumber: 5
     }
   }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -382,12 +382,13 @@ const Map = ({
     defaultCenter: defaultCenter,
     defaultZoom: zoom,
     options: {
-      fullscreenControl: false
+      fullscreenControl: false,
+      zoomControl: false
     },
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 13,
       columnNumber: 7
     }
   }, __jsx(_UserMarker__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -397,7 +398,7 @@ const Map = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 19,
       columnNumber: 9
     }
   }), nearbyUsers.map(people => __jsx(_ContaminatedMarker__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -408,13 +409,24 @@ const Map = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 26,
       columnNumber: 11
     }
   }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Map);
+
+/***/ }),
+
+/***/ "./components/Map/styles.css":
+/*!***********************************!*\
+  !*** ./components/Map/styles.css ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -549,20 +561,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_AppMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AppMenu */ "./components/AppMenu/index.js");
-/* harmony import */ var _components_Loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Loading */ "./components/Loading/index.js");
-/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Map */ "./components/Map/index.js");
-/* harmony import */ var _lib_auth0__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/auth0 */ "./lib/auth0.js");
-/* harmony import */ var _util_getCurrentDate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../util/getCurrentDate */ "./util/getCurrentDate.js");
-/* harmony import */ var _lib_firebase__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/firebase */ "./lib/firebase.js");
-/* harmony import */ var _lib_firebase__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_lib_firebase__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _styles_app_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/app.css */ "./styles/app.css");
-/* harmony import */ var _styles_app_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_app_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "sweetalert2");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons/fa */ "react-icons/fa");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_AppMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/AppMenu */ "./components/AppMenu/index.js");
+/* harmony import */ var _components_Loading__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Loading */ "./components/Loading/index.js");
+/* harmony import */ var _components_Map__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Map */ "./components/Map/index.js");
+/* harmony import */ var _public_assets_icons_virus_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../public/assets/icons/virus.svg */ "./public/assets/icons/virus.svg");
+/* harmony import */ var _lib_auth0__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../lib/auth0 */ "./lib/auth0.js");
+/* harmony import */ var _util_getCurrentDate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../util/getCurrentDate */ "./util/getCurrentDate.js");
+/* harmony import */ var _lib_firebase__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../lib/firebase */ "./lib/firebase.js");
+/* harmony import */ var _lib_firebase__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_lib_firebase__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _styles_app_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../styles/app.css */ "./styles/app.css");
+/* harmony import */ var _styles_app_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_styles_app_css__WEBPACK_IMPORTED_MODULE_12__);
 var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/pages/app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
- // import axios from 'axios';
+
+
+
+
 
 
 
@@ -575,8 +597,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function App({
   isAuth,
   hasRegisteredDailyStatus,
-  user,
-  nearbyUsers = []
+  user
 }) {
   const {
     0: coords,
@@ -585,38 +606,96 @@ function App({
     latitude: null,
     longitude: null
   });
+  const {
+    0: radius,
+    1: setRadius
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(10);
+  const {
+    0: filter,
+    1: setFilter
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('all');
+  const {
+    0: nearbyUsers,
+    1: setNearbyUsers
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
 
   function getUserLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(position => {
-        const {
-          latitude,
-          longitude
-        } = position.coords;
-        setCoords({
-          latitude,
-          longitude
-        });
+    if (!navigator.geolocation) {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+        title: 'Erro',
+        text: 'Seu navegador não possui suporte a geolocalização. Utilize outro navegador para continuar utilizando o My Daily Status',
+        icon: 'error',
+        confirmButtonColor: '#961d66'
+      }).then(result => {
+        if (result) next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/');
       });
-    } else {
-      alert('Seu navegador não possui suporte a geolocalização');
-      next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/');
     }
+
+    navigator.geolocation.getCurrentPosition(position => {
+      const {
+        latitude,
+        longitude
+      } = position.coords;
+      setCoords({
+        latitude,
+        longitude
+      });
+    }, err => {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
+        title: 'Erro',
+        text: 'Erro ao tentar sua localização. Recarregue a pagina para tentar novamente.',
+        icon: 'error',
+        confirmButtonColor: '#961d66'
+      }).then(result => {
+        document.location.reload(true);
+      });
+    }, {
+      timeout: 10000
+    });
+  }
+
+  async function getNearbUsers() {
+    const response = await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/nearby-users', {
+      params: {
+        latitude: parseFloat(coords.latitude),
+        longitude: parseFloat(coords.longitude),
+        filter,
+        radius: parseFloat(radius)
+      },
+      headers: {
+        userId: user.sub
+      }
+    });
+    const {
+      data
+    } = response;
+    setNearbyUsers(data.nearbyUsers);
   }
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    if (!isAuth) next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/');
-    if (!hasRegisteredDailyStatus) next_router__WEBPACK_IMPORTED_MODULE_1___default.a.push('/status');
-    getUserLocation(); // await axios.post('/api/user/')
+    if (!isAuth) {
+      next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/');
+      return;
+    }
+
+    if (!hasRegisteredDailyStatus) {
+      next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/status');
+      return;
+    }
+
+    getUserLocation();
   }, []);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    if (coords.latitude && coords.longitude) getNearbUsers();
+  }, [coords]);
 
   if (isAuth && coords.latitude && coords.longitude) {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_AppMenu__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_AppMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
       user: user,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46,
+        lineNumber: 95,
         columnNumber: 9
       }
     }), __jsx("div", {
@@ -624,10 +703,10 @@ function App({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47,
+        lineNumber: 97,
         columnNumber: 9
       }
-    }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_7__["default"], {
       nearbyUsers: nearbyUsers,
       user: user,
       defaultCenter: {
@@ -638,10 +717,137 @@ function App({
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48,
+        lineNumber: 98,
         columnNumber: 11
       }
-    })));
+    }), __jsx("div", {
+      className: "filter-bar",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 108,
+        columnNumber: 11
+      }
+    }, __jsx("div", {
+      className: "input-container",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 109,
+        columnNumber: 13
+      }
+    }, __jsx("div", {
+      className: "icon",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 110,
+        columnNumber: 15
+      }
+    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_4__["FaCompass"], {
+      color: "#fff",
+      size: 24,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 111,
+        columnNumber: 17
+      }
+    })), __jsx("input", {
+      value: radius,
+      type: "number",
+      onChange: e => setRadius(e.target.value),
+      placeholder: "Raio de busca (KM)",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 113,
+        columnNumber: 15
+      }
+    }), __jsx("p", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 119,
+        columnNumber: 15
+      }
+    }, "KM")), __jsx("div", {
+      className: "select-container",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 122,
+        columnNumber: 13
+      }
+    }, __jsx("div", {
+      className: "icon",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 123,
+        columnNumber: 15
+      }
+    }, __jsx(_public_assets_icons_virus_svg__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      fill: "#fff",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 124,
+        columnNumber: 17
+      }
+    })), __jsx("select", {
+      onChange: e => setFilter(e.target.value),
+      value: filter,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 127,
+        columnNumber: 15
+      }
+    }, __jsx("option", {
+      value: "covid",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 131,
+        columnNumber: 17
+      }
+    }, "Covid"), __jsx("option", {
+      value: "suspect",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 132,
+        columnNumber: 17
+      }
+    }, "Suspeitos"), __jsx("option", {
+      value: "all",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 133,
+        columnNumber: 17
+      }
+    }, "Todos as pessoas"))), __jsx("button", {
+      type: "button",
+      onClick: () => getNearbUsers(),
+      className: "search-button",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 137,
+        columnNumber: 13
+      }
+    }, __jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_4__["FaSearch"], {
+      color: "#fff",
+      size: 18,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 142,
+        columnNumber: 15
+      }
+    })))));
   }
 
   return __jsx("div", {
@@ -649,14 +855,14 @@ function App({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
+      lineNumber: 151,
       columnNumber: 5
     }
-  }, __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
+      lineNumber: 152,
       columnNumber: 7
     }
   }));
@@ -665,7 +871,7 @@ async function getServerSideProps({
   req,
   res
 }) {
-  const session = await _lib_auth0__WEBPACK_IMPORTED_MODULE_5__["default"].getSession(req); // Verifica se o usuário está logado
+  const session = await _lib_auth0__WEBPACK_IMPORTED_MODULE_9__["default"].getSession(req); // Verifica se o usuário está logado
 
   if (!session) {
     return {
@@ -674,9 +880,13 @@ async function getServerSideProps({
       }
     };
   }
+  /*
+   * Verifica se o usuário já cadastrou seu status diario
+   */
 
-  const currentDate = Object(_util_getCurrentDate__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  const userDailyStatus = await _lib_firebase__WEBPACK_IMPORTED_MODULE_7__["db"].collection('users').doc(session.user.sub).collection('history').doc(currentDate).get();
+
+  const currentDate = Object(_util_getCurrentDate__WEBPACK_IMPORTED_MODULE_10__["default"])();
+  const userDailyStatus = await _lib_firebase__WEBPACK_IMPORTED_MODULE_11__["db"].collection('users').doc(session.user.sub).collection('history').doc(currentDate).get();
   const todayRegistered = userDailyStatus.data();
 
   if (!todayRegistered) {
@@ -687,34 +897,13 @@ async function getServerSideProps({
         user: session.user
       }
     };
-  } // Caso o usuário já tenha cadastrado seu status diário, será verificado todos os
-  // usúarios que estao proximos dele
+  }
 
-
-  const {
-    coordinates
-  } = todayRegistered;
-  const nearbyUsers = await _lib_firebase__WEBPACK_IMPORTED_MODULE_7__["db"].collection('history').doc('2020-04-20').collection('all').near({
-    center: coordinates,
-    radius: 1000000
-  }).get();
-  const nearbyUsersList = [];
-  nearbyUsers.docs.forEach(doc => {
-    nearbyUsersList.push({
-      id: doc.id,
-      status: doc.data().status,
-      coordinates: {
-        longitude: doc.data().coordinates.longitude,
-        latitude: doc.data().coordinates.latitude
-      }
-    });
-  });
   return {
     props: {
       isAuth: true,
       hasRegisteredDailyStatus: true,
-      user: session.user,
-      nearbyUsers: nearbyUsersList
+      user: session.user
     }
   };
 }
@@ -780,7 +969,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 3:
+/***/ 7:
 /*!****************************!*\
   !*** multi ./pages/app.js ***!
   \****************************/
@@ -800,6 +989,17 @@ module.exports = __webpack_require__(/*! /home/thiago/Documentos/Dev/Projetos/fu
 /***/ (function(module, exports) {
 
 module.exports = require("@auth0/nextjs-auth0");
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 
@@ -855,6 +1055,28 @@ module.exports = require("next/router");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-icons/fa":
+/*!*********************************!*\
+  !*** external "react-icons/fa" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-icons/fa");
+
+/***/ }),
+
+/***/ "sweetalert2":
+/*!******************************!*\
+  !*** external "sweetalert2" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("sweetalert2");
 
 /***/ })
 

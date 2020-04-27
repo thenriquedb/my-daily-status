@@ -6,12 +6,9 @@ import VirusSvg from '../../public/assets/icons/virus.svg';
 const ContaminatedMarker = ({ data }) => {
   return (
     <div
-      className={`contaminated-marker ${
-        data.status === 'covid' ? 'covid' : 'suspect'
-        }`}
+      className={`contaminated-marker ${data.status === 'covid' && 'covid'}`}
     >
       <VirusSvg />
-      {/* <img src="/assets/icons/virus.svg" /> */}
     </div>
   );
 };

@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import GoogleMapReact from 'google-map-react';
 
 import UserMarker from '../UserMarker';
 import ContaminatedMarker from '../ContaminatedMarker';
 
+import './styles.css';
+
 const Map = ({ user, defaultCenter, nearbyUsers, zoom = 15 }) => {
   console.log(nearbyUsers);
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
+    <div className="map-container">
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
         defaultCenter={defaultCenter}
         defaultZoom={zoom}
-        options={{ fullscreenControl: false }}
+        options={{ fullscreenControl: false, zoomControl: false }}
       >
         <UserMarker
           user={user}

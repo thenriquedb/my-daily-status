@@ -31,9 +31,6 @@ export default function status({ user, isAuth }) {
         icon: 'error',
         confirmButtonColor: '#961d66',
         confirmButtonText: 'OK',
-        customClass: {
-          confirmButton: 'swal-confirm-button',
-        },
       });
 
       Router.push('/');
@@ -65,6 +62,10 @@ export default function status({ user, isAuth }) {
         customClass: {
           confirmButton: 'swal-confirm-button',
         },
+      }).then((result) => {
+        if (result.value) {
+          Router.push('/app');
+        }
       });
 
       return;
