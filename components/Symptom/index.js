@@ -5,7 +5,7 @@ export default function Symptom({ symptom = {}, selected = false, onClick }) {
   return (
     <button
       type="button"
-      onClick={() => onClick(symptom.value)}
+      onClick={() => onClick(symptom.name)}
       className={`symptom-icon-container ${selected && 'selected'}`}
     >
       <div className="symptom-icon">

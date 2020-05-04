@@ -121,7 +121,7 @@ export default function status({ user, isAuth }) {
                   <Symptom
                     key={symptom.value}
                     onClick={selectSymptom}
-                    selected={selectedSymptoms.includes(symptom.value)}
+                    selected={selectedSymptoms.includes(symptom.name)}
                     symptom={symptom}
                   />
                 );

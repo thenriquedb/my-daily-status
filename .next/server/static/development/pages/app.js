@@ -231,49 +231,61 @@ function AppMenu({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ "./components/ContaminatedMarker/styles.css");
-/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _public_assets_icons_virus_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../public/assets/icons/virus.svg */ "./public/assets/icons/virus.svg");
+/* harmony import */ var _lib_auth0__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../lib/auth0 */ "./lib/auth0.js");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.css */ "./components/ContaminatedMarker/styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _public_assets_icons_virus_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../public/assets/icons/virus.svg */ "./public/assets/icons/virus.svg");
 var _jsxFileName = "/home/thiago/Documentos/Dev/Projetos/fullstack-lab/components/ContaminatedMarker/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
+
 const ContaminatedMarker = ({
-  data
+  data,
+  userId
 }) => {
-  return __jsx("div", {
-    className: `contaminated-marker ${data.status === 'covid' && 'covid'}`,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 5
-    }
-  }, __jsx("div", {
-    className: "contaminated-marker-popup",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 7
-    }
-  }, __jsx("h2", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 9
-    }
-  }, " doidmias")), __jsx(_public_assets_icons_virus_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 7
-    }
-  }));
+  if (data.id !== userId) {
+    return __jsx("div", {
+      className: `contaminated-marker ${data.status === 'covid' && 'covid'}`,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10,
+        columnNumber: 7
+      }
+    }, __jsx("div", {
+      className: "contaminated-marker-popup",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13,
+        columnNumber: 9
+      }
+    }, __jsx("h2", {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14,
+        columnNumber: 11
+      }
+    }, " ", data.id), __jsx("h2", {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16,
+        columnNumber: 11
+      }
+    }, " ", userId)), __jsx(_public_assets_icons_virus_svg__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18,
+        columnNumber: 9
+      }
+    }));
+  }
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ContaminatedMarker);
@@ -381,16 +393,15 @@ const Map = ({
   nearbyUsers,
   zoom = 15
 }) => {
-  console.log(nearbyUsers);
   return __jsx("div", {
     className: "map-container",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 11,
       columnNumber: 5
     }
-  }, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "id: ", user.sub, __jsx(google_map_react__WEBPACK_IMPORTED_MODULE_1___default.a, {
     bootstrapURLKeys: {
       key: "AIzaSyDc4CkmlXdS1_w2Pg9z32LifASGs_ryEFc"
     },
@@ -417,7 +428,7 @@ const Map = ({
       columnNumber: 9
     }
   }), nearbyUsers.map(people => __jsx(_ContaminatedMarker__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    key: people.id,
+    key: people,
     lat: people.coordinates.latitude,
     lng: people.coordinates.longitude,
     data: people,

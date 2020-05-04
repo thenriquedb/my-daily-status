@@ -55,8 +55,7 @@ export default async function (req, res) {
       });
     });
   }
-  console.log(nearbyUsersList);
   return res.status(200).json({
-    nearbyUsers: nearbyUsersList,
+    nearbyUsers: nearbyUsersList.slice(1, nearbyUsersList.length - 1),
   });
 }

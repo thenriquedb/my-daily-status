@@ -7,9 +7,9 @@ import ContaminatedMarker from '../ContaminatedMarker';
 import './styles.css';
 
 const Map = ({ user, defaultCenter, nearbyUsers, zoom = 15 }) => {
-  console.log(nearbyUsers);
   return (
     <div className="map-container">
+      id: {user.sub}
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
         defaultCenter={defaultCenter}
@@ -24,7 +24,7 @@ const Map = ({ user, defaultCenter, nearbyUsers, zoom = 15 }) => {
 
         {nearbyUsers.map((people) => (
           <ContaminatedMarker
-            key={people.id}
+            key={people}
             lat={people.coordinates.latitude}
             lng={people.coordinates.longitude}
             data={people}
