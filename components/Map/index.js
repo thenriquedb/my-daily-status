@@ -13,7 +13,7 @@ const Map = ({ user, defaultCenter, nearbyUsers, zoom = 15 }) => {
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
         defaultCenter={defaultCenter}
-        defaultZoom={zoom}
+        defaultZoom={12}
         options={{ fullscreenControl: false, zoomControl: false }}
       >
         <UserMarker

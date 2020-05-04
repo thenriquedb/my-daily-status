@@ -1,10 +1,39 @@
 .contaminated-marker {
+  position: absolute;
+
   width: 25px;
   height: 25px;
-  fill: #FDDD5C;
-  /* background-image: url("/assets/icons/virus.svg"); */
+  fill: #feb72b;
 }
 
 .covid {
-  fill: #ff6961;
+  fill: #dd2c00
+}
+
+.contaminated-marker-popup {
+  position: absolute;
+  bottom: 30px;
+  left: -80px;
+
+  display: none;
+  z-index: 10;
+  
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+  
+  height: 100px;
+  width: 200px;
+  border-radius: 8px;
+  
+  transition: transform 0.5s;
+}
+
+.contaminated-marker:hover .contaminated-marker-popup {
+  display: flex;
+  cursor: pointer;
+  transform: translateY(-5px);
+  justify-content: center;
+  align-items: center;
 }

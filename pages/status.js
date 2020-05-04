@@ -45,12 +45,22 @@ export default function status({ user, isAuth }) {
 
     setSelectedSymptoms([...selectedSymptoms, symptom]);
   }
+  // userId
 
   async function handleSave() {
-    const response = await axios.post('/api/status/store', {
-      symptoms: selectedSymptoms,
-      coords,
-    });
+    const response = await axios.post(
+      '/api/status/store',
+      {
+        symptoms: selectedSymptoms,
+        coords,
+        status: 'covid',
+      },
+      {
+        headers: {
+          userId: user.sub,
+        },
+      }
+    );
 
     if (response.status === 200) {
       Swal.fire({

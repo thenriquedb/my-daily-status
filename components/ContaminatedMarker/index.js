@@ -8,6 +8,9 @@ const ContaminatedMarker = ({ data }) => {
     <div
       className={`contaminated-marker ${data.status === 'covid' && 'covid'}`}
     >
+      <div className="contaminated-marker-popup">
+        <h2> doidmias</h2>
+      </div>
       <VirusSvg />
     </div>
   );

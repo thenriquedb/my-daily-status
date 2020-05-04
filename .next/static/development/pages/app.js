@@ -174,11 +174,26 @@ var ContaminatedMarker = function ContaminatedMarker(_ref) {
       lineNumber: 8,
       columnNumber: 5
     }
-  }, __jsx(_public_assets_icons_virus_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx("div", {
+    className: "contaminated-marker-popup",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11,
+      columnNumber: 7
+    }
+  }, __jsx("h2", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }, " doidmias")), __jsx(_public_assets_icons_virus_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
       columnNumber: 7
     }
   }));
@@ -287,7 +302,7 @@ var Map = function Map(_ref) {
       key: "AIzaSyDc4CkmlXdS1_w2Pg9z32LifASGs_ryEFc"
     },
     defaultCenter: defaultCenter,
-    defaultZoom: zoom,
+    defaultZoom: 12,
     options: {
       fullscreenControl: false,
       zoomControl: false

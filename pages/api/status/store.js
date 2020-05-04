@@ -2,8 +2,9 @@ import { db, admin } from '../../../lib/firebase';
 import getCurrentDate from '../../../util/getCurrentDate';
 
 export default async function store(req, res) {
-  const { symptoms = [], status, userId } = req.body;
+  const { symptoms = [], status } = req.body;
   const { latitude, longitude } = req.body.coords;
+  const { userid: userId } = req.headers;
 
   const currentDate = getCurrentDate();
 
