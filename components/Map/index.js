@@ -9,7 +9,6 @@ import './styles.css';
 const Map = ({ user, defaultCenter, nearbyUsers, zoom = 15 }) => {
   return (
     <div className="map-container">
-      id: {user.sub}
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
         defaultCenter={defaultCenter}
