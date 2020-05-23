@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "export": "npm run build && next export"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.11.0",
