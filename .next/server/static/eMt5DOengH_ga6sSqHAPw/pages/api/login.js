@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
+/******/ 	var installedModules = require('../../../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -88,23 +88,68 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "KqAr");
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "KqAr":
+/***/ "0K2u":
+/***/ (function(module, exports) {
+
+module.exports = require("@auth0/nextjs-auth0");
+
+/***/ }),
+
+/***/ "2NqA":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _auth0_nextjs_auth0__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("0K2u");
+/* harmony import */ var _auth0_nextjs_auth0__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_auth0_nextjs_auth0__WEBPACK_IMPORTED_MODULE_0__);
+/* eslint-disable */
+
+/* harmony default export */ __webpack_exports__["a"] = (Object(_auth0_nextjs_auth0__WEBPACK_IMPORTED_MODULE_0__["initAuth0"])({
+  clientId: "ys1EtB4gfIydejrHu73TAjQ9D4DKaKNu",
+  clientSecret: "C9lSDq1DNoN06X8D4iSuCKu5K-7aWOP4Ezjbm85quIw3bmYIGDGIqJ1Mt5TgeZfc",
+  scope: "openid profile",
+  domain: "dev-0x0gtl4z.auth0.com",
+  redirectUri: "http://localhost:3000/api/callback",
+  postLogoutRedirectUri: "http://localhost:3000/",
+  session: {
+    cookieSecret: "6499fd0d6a0a56ed2c43d9e5c258dda7",
+    cookieLifetime: "3600"
+  }
+}));
+
+/***/ }),
+
+/***/ 3:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("A4T3");
+
+
+/***/ }),
+
+/***/ "A4T3":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return login; });
+/* harmony import */ var _lib_auth0__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("2NqA");
 
-    
+async function login(req, res) {
+  try {
+    await _lib_auth0__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].handleLogin(req, res);
+  } catch (error) {
+    res.status(error.status || 500).end(error.message);
+  }
 
-    /* harmony default export */ __webpack_exports__["default"] = (function (ctx) {
-      return Promise.all([])
-    });
-  
+  return res.send({
+    ok: true
+  });
+}
 
 /***/ })
 

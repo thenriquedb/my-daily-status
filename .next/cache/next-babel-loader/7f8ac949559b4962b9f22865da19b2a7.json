@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport './styles.css';\n\nvar UserMarker = function UserMarker(_ref) {\n  var user = _ref.user;\n  return __jsx(\"img\", {\n    className: \"user-marker\",\n    src: user.picture,\n    alt: user.name\n  });\n};\n\nexport default UserMarker;","map":null,"metadata":{},"sourceType":"module"}
