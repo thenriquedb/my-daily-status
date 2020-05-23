@@ -38,12 +38,9 @@ const Header = () => {
               <li>
                 <Link href="/sobre"> Sobre </Link>
               </li>
-              <li>
-                <Link href="/cadastro"> Cadastro </Link>
-              </li>
 
               <li>
-                <Link href="/login"> Entrar </Link>
+                <Link href="/api/login"> Entrar </Link>
               </li>
             </ul>
           </nav>

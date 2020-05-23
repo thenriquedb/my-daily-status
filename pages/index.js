@@ -1,6 +1,7 @@
 import React from 'react';
 import fetch from 'isomorphic-unfetch';
 import Link from 'next/link';
+import Head from 'next/head';
 
 import Statistics from '../components/Statistics';
 import Header from '../components/Header';
@@ -10,10 +11,15 @@ import '../styles/index.css';
 
 const Index = ({ cases }) => {
   const { brazil, world } = cases;
-
+  console.log(cases);
   return (
     <>
       <Header />
+      <Head>
+        <title>My Dayly Status</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
+
       <main className="home-container">
         <div className="bg-filter">
           <div className="content">
@@ -23,13 +29,12 @@ const Index = ({ cases }) => {
             </h1>
             <h2>
               {' '}
-              E se você soubesse como as pessoas ao seu redor estivessem?{' '}
+              E se você pudesse saber como as pessoas ao seu redor estão se
+              sentindo?{' '}
             </h2>
             <p>
               Você compartilha como você está hoje, e só assim consegue
-              visualizar as pessoas a sua volta de forma anônima. Você
-              compartilha como você está hoje, e só assim consegue visualizar as
-              pessoas a sua volta de forma anônima.
+              visualizar as pessoas a sua volta de forma anônima.
             </p>
 
             <Link href="/api/login">
@@ -71,10 +76,7 @@ const Index = ({ cases }) => {
           </div>
         </section>
 
-        <Statistics
-          title="ESTATÍSTICAS DO BRASIL"
-          todayCases={brazil[brazil.length - 1]}
-        />
+        <Statistics title="ESTATÍSTICAS DO BRASIL" todayCases={brazil} />
         <Statistics title="ESTATÍSTICAS DO MUNDO" todayCases={world} />
       </main>
       <Footer />
@@ -88,7 +90,7 @@ Index.getInitialProps = async function () {
   );
 
   const brazilCases = await fetch(
-    'https://api.covid19api.com/live/country/brazil'
+    'https://xx9p7hp1p7.execute-api.us-east-1.amazonaws.com/prod/PortalGeralApi'
   );
 
   const dataBrazil = await brazilCases.json();
@@ -96,7 +98,11 @@ Index.getInitialProps = async function () {
 
   return {
     cases: {
-      brazil: dataBrazil,
+      brazil: {
+        Confirmed: dataBrazil.confirmados.total,
+        Recovered: dataBrazil.confirmados.recuperados,
+        Deaths: dataBrazil.obitos.total,
+      },
       world: {
         Confirmed: dataWorld.TotalConfirmed,
         Deaths: dataWorld.TotalDeaths,

@@ -6,7 +6,6 @@ export default async function (req, res) {
 
   let nearbyUsers;
   const currentDate = getCurrentDate();
-  console.log(latitude, currentDate, longitude, filter, radius);
 
   switch (filter.toLowerCase()) {
     case 'covid':

@@ -13,6 +13,7 @@ import Symptom from '../components/Symptom';
 import symptoms from '../json/symptoms.json';
 
 import '../styles/status.css';
+import diagnostic from '../util/diagnostic';
 
 export default function status({ user, isAuth }) {
   const [coords, setCoords] = useState({ latitude: null, longitude: null });
@@ -48,12 +49,14 @@ export default function status({ user, isAuth }) {
   // userId
 
   async function handleSave() {
+    const status = diagnostic(selectedSymptoms);
+
     const response = await axios.post(
-      '/api/status/store',
+      '/api/createStatus',
       {
         symptoms: selectedSymptoms,
         coords,
-        status: 'covid',
+        status,
       },
       {
         headers: {
@@ -62,16 +65,26 @@ export default function status({ user, isAuth }) {
       }
     );
 
-    if (response.status === 200) {
+    if (response.status !== 200) {
       Swal.fire({
-        title: 'Sucesso',
-        text: 'Seus sintomas foram salvos com sucesso!',
-        icon: 'success',
+        title: 'Erro',
+        text: 'Ocorreu um erro ao salvar suas informações. Tente novamente.',
+        icon: 'error',
         confirmButtonColor: '#961d66',
         confirmButtonText: 'OK',
         customClass: {
           confirmButton: 'swal-confirm-button',
         },
+      });
+    }
+
+    if (status === 'covid') {
+      Swal.fire({
+        title: 'Cuidado!',
+        text:
+          'Você possui uma grande chance de está contaminado. Procure um médico.',
+        confirmButtonColor: '#961d66',
+        confirmButtonText: 'OK',
       }).then((result) => {
         if (result.value) {
           Router.push('/app');
@@ -81,16 +94,34 @@ export default function status({ user, isAuth }) {
       return;
     }
 
-    Swal.fire({
-      title: 'Erro',
-      text: 'Ocorreu um erro ao salvar suas informações. Tente novamente.',
-      icon: 'error',
-      confirmButtonColor: '#961d66',
-      confirmButtonText: 'OK',
-      customClass: {
-        confirmButton: 'swal-confirm-button',
-      },
-    });
+    if (status === 'suspect') {
+      Swal.fire({
+        title: 'Gripe',
+        text: 'Você possui grande chance de está apenas gripado ou resfriado.',
+        confirmButtonColor: '#961d66',
+        confirmButtonText: 'OK',
+      }).then((result) => {
+        if (result.value) {
+          Router.push('/app');
+        }
+      });
+
+      return;
+    }
+
+    if (status === 'healthy') {
+      Swal.fire({
+        title: 'Saúdavel',
+        text:
+          'Aparentemente você está saúdavel. Tome todas as medidas de prevenção para continuar assim.',
+        confirmButtonColor: '#961d66',
+        confirmButtonText: 'OK',
+      }).then((result) => {
+        if (result.value) {
+          Router.push('/app');
+        }
+      });
+    }
   }
 
   useEffect(() => {

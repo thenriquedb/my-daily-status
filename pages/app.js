@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Head from 'next/head';
 import Router from 'next/router';
 import Swal from 'sweetalert2';
 import { FaCompass, FaSearch } from 'react-icons/fa';
@@ -93,6 +94,11 @@ export default function App({ isAuth, hasRegisteredDailyStatus, user }) {
     return (
       <>
         <AppMenu user={user} />
+
+        <Head>
+          <title>My Dayly Status </title>
+          <meta property="og:title" content="My page title" key="title" />
+        </Head>
 
         <div className="app-container">
           <Map
