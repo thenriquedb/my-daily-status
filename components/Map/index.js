@@ -7,6 +7,11 @@ import ContaminatedMarker from '../ContaminatedMarker';
 import './styles.css';
 
 const Map = ({ user, defaultCenter, nearbyUsers, zoom = 15 }) => {
+  console.log(
+    'process.env.GOOGLE_MAPS_API_KEY: ',
+    process.env.GOOGLE_MAPS_API_KEY
+  );
+  console.log('process.env: ', process.env);
   return (
     <div className="map-container">
       <GoogleMapReact
