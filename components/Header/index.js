@@ -36,7 +36,7 @@ const Header = () => {
                 <Link href="/"> Início </Link>
               </li>
               <li>
-                <Link href="/sobre"> Sobre </Link>
+                <Link href="/"> Sobre </Link>
               </li>
 
               <li>
