@@ -11,7 +11,12 @@ const Map = ({ user, defaultCenter, nearbyUsers, zoom = 15 }) => {
     'process.env.GOOGLE_MAPS_API_KEY: ',
     process.env.GOOGLE_MAPS_API_KEY
   );
-  console.log('process.env: ', process.env);
+
+  console.log(
+    'process.env.AUTH0_REDIRECT_URI: ',
+    process.env.AUTH0_REDIRECT_URI
+  );
+
   return (
     <div className="map-container">
       <GoogleMapReact
