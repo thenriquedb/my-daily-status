@@ -10,6 +10,7 @@ Projeto desenvolvido durante o workshop Fullstack Lab, realizado pelo DevPleno. 
 * Firabase
 * Auth0
 * Maps JavaScript API Go to Console
+* Zeit para deploy
 
 ## Preview
 
