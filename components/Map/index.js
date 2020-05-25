@@ -7,20 +7,14 @@ import ContaminatedMarker from '../ContaminatedMarker';
 import './styles.css';
 
 const Map = ({ user, defaultCenter, nearbyUsers, zoom = 15 }) => {
-  console.log(
-    'process.env.GOOGLE_MAPS_API_KEY: ',
-    process.env.GOOGLE_MAPS_API_KEY
-  );
-
-  console.log(
-    'process.env.AUTH0_REDIRECT_URI: ',
-    process.env.AUTH0_REDIRECT_URI
-  );
-
   return (
     <div className="map-container">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
+        bootstrapURLKeys={{
+          key:
+            process.env.GOOGLE_MAPS_API_KEY ||
+            'AIzaSyDc4CkmlXdS1_w2Pg9z32LifASGs_ryEFc',
+        }}
         defaultCenter={defaultCenter}
         defaultZoom={12}
         options={{ fullscreenControl: false, zoomControl: false }}

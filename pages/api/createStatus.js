@@ -2,7 +2,6 @@ import { db, admin } from '../../lib/firebase';
 import getCurrentDate from '../../util/getCurrentDate';
 
 export default async function createStatus(req, res) {
-  console.log('CHEGOU\n\n\n\n\n');
   const { symptoms = [], status } = req.body;
   const { latitude, longitude } = req.body.coords;
   const { userid: userId } = req.headers;

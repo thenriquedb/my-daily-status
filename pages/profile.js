@@ -93,7 +93,7 @@ export async function getServerSideProps({ req, res }) {
 
     const historyList = [];
 
-    console.log('symptomsHistory.docs.length : ', symptomsHistory.docs.length);
+    ('symptomsHistory.docs.length : ', symptomsHistory.docs.length);
     if (symptomsHistory.docs.length > 0) {
       symptomsHistory.docs.map((item) => {
         historyList.push({

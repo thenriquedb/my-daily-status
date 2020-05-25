@@ -11,7 +11,7 @@ import '../styles/index.css';
 
 const Index = ({ cases }) => {
   const { brazil, world } = cases;
-  console.log(cases);
+
   return (
     <>
       <Header />

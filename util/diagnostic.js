@@ -28,10 +28,6 @@ export default function diagnostic(symptoms) {
     }
   });
 
-  console.log(symptoms);
-  console.log('gripe: ', contInfluenza);
-  console.log('covid: ', contCovid);
-
   if (contInfluenza > contCovid) {
     return 'suspect';
   }
