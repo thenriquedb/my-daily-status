@@ -1,0 +1,26 @@
+{
+  "env": {
+    "AUTH0_CLIENT_ID": "ys1EtB4gfIydejrHu73TAjQ9D4DKaKNu",
+    "AUTH0_CLIENT_SECRET": "C9lSDq1DNoN06X8D4iSuCKu5K-7aWOP4Ezjbm85quIw3bmYIGDGIqJ1Mt5TgeZfc",
+    "AUTH0_SCOPE": "openid profile",
+    "AUTH0_DOMAIN": "dev-0x0gtl4z.auth0.com",
+    "AUTH0_REDIRECT_URI": "https://my-dayly-status.now.sh/api/callback",
+    "AUTH0_POST_LOGOUT_REDIRECT_URI": "https://my-dayly-status.now.sh/,",
+    "AUTH0_COOKIE_SECRET": "6499fd0d6a0a56ed2c43d9e5c258dda7",
+    "AUTH0_COOKIE_LIFETIME": "3600",
+    "GOOGLE_MAPS_API_KEY": "AIzaSyDc4CkmlXdS1_w2Pg9z32LifASGs_ryEFc"
+  },
+  "build": {
+    "env": {
+      "AUTH0_CLIENT_ID": "ys1EtB4gfIydejrHu73TAjQ9D4DKaKNu",
+      "AUTH0_CLIENT_SECRET": "C9lSDq1DNoN06X8D4iSuCKu5K-7aWOP4Ezjbm85quIw3bmYIGDGIqJ1Mt5TgeZfc",
+      "AUTH0_SCOPE": "openid profile",
+      "AUTH0_DOMAIN": "dev-0x0gtl4z.auth0.com",
+      "AUTH0_REDIRECT_URI": "https://my-dayly-status.now.sh/",
+      "AUTH0_POST_LOGOUT_REDIRECT_URI": "https://my-dayly-status.now.sh/",
+      "AUTH0_COOKIE_SECRET": "6499fd0d6a0a56ed2c43d9e5c258dda7",
+      "AUTH0_COOKIE_LIFETIME": "3600",
+      "GOOGLE_MAPS_API_KEY": "AIzaSyDc4CkmlXdS1_w2Pg9z32LifASGs_ryEFc"
+    }
+  }
+}
